@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_87" data-name="Ellipse 87" cx="10" cy="10" r="10" transform="translate(1463 60)" fill="#d6d6d6"/>
+    </clipPath>
+  </defs>
+  <g id="flag5" transform="translate(-1463 -60)" clip-path="url(#clip-path)">
+    <g id="_001-india" data-name="001-india" transform="translate(1458.04 -25.337)">
+      <rect id="Rectangle_1321" data-name="Rectangle 1321" width="30.001" height="20" transform="translate(0 85.337)" fill="#f0f0f0"/>
+      <rect id="Rectangle_1322" data-name="Rectangle 1322" width="30.001" height="6.667" transform="translate(0 85.337)" fill="#ff9811"/>
+      <rect id="Rectangle_1323" data-name="Rectangle 1323" width="30.001" height="6.667" transform="translate(0 98.67)" fill="#6da544"/>
+      <circle id="Ellipse_107" data-name="Ellipse 107" cx="2.572" cy="2.572" r="2.572" transform="translate(12.428 92.765)" fill="#0052b4"/>
+      <circle id="Ellipse_108" data-name="Ellipse 108" cx="1.607" cy="1.607" r="1.607" transform="translate(13.393 93.73)" fill="#f0f0f0"/>
+      <path id="Path_3176" data-name="Path 3176" d="M228.4,222.146l.5,1.125,1.222-.133-.726.992.726.992-1.222-.133-.5,1.125-.5-1.125-1.222.133.726-.992-.726-.992,1.222.133Z" transform="translate(-213.399 -128.793)" fill="#0052b4"/>
+    </g>
+  </g>
+</svg>

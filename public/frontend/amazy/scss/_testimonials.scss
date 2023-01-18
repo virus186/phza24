@@ -1,0 +1,65 @@
+.testmonial_area_one {
+  background: #fff;
+  padding-top: 113px;
+  padding-bottom: 113px;
+  @media #{$tab} {
+    padding-top: 75px;
+    padding-bottom: 73px;
+  }
+  .single_testmonial {
+    p.quote_text {
+      font-size: 34px;
+      font-weight: 500;
+      color: #868686;
+      line-height: 1.47;
+      font-family: $font1;
+      font-style: italic;
+      @media #{$tab} {
+        font-size: 24px;
+      }
+    }
+    .testimonial_senderName {
+      font-size: 16px;
+      font-weight: 400;
+      color: #687083;
+      margin: 30px 0 75px 0;
+      @media #{$tab} {
+        margin: 20px 0 30px 0;
+      }
+      span {
+        font-weight: 700;
+        color: #090b17;
+      }
+    }
+  }
+  .slider-nav {
+    .slick-track {
+      left: 0 !important;
+      transform: none !important;
+    }
+    .item {
+      width: 90px !important;
+      height: 90px;
+      border-radius: 50%;
+      @media #{$tab} {
+        width: 80px !important;
+        height: 80px;
+      }
+      &:not(:last-child) {
+        margin-right: 20px;
+        @media #{$tab} {
+          margin-right: 10px;
+        }
+      }
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+      &.slick-current.slick-center {
+        padding: 5px;
+        border: solid 1px #c8d0de;
+        background-color: #ffffff;
+      }
+    }
+  }
+}

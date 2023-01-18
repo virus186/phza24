@@ -1,0 +1,233 @@
+.brand_area {
+  .single_brand {
+    text-align: center;
+    border: 1px solid #dedede;
+    height: 160px;
+    img {
+      display: inline-block;
+      width: auto;
+    }
+  }
+}
+
+.dash_border {
+  border-top: 1px dashed #ebebeb;
+}
+
+// cta
+.cta_area3 {
+  background: #f7f7f7;
+  padding-bottom: 100px;
+  @media #{$tab} {
+    padding-bottom: 75px;
+  }
+  .cta_inner {
+    position: relative;
+    z-index: 1;
+    background-image: url(../img/banner/cta_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 48px 70px 48px 90px;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    align-items: center;
+    @media #{ '(min-width: 768px) and (max-width: 1199.98px)'} {
+      padding: 50px 30px;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 30px;
+    }
+    @media #{$tab} {
+      grid-template-columns: 1fr;
+      padding: 30px;
+    }
+    .cta_inner_subscribe {
+      padding-right: 50px;
+      @media #{ '(min-width: 768px) and (max-width: 1199.98px)'} {
+        padding-right: 0;
+      }
+      @media #{$tab} {
+        padding-right: 0;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      right: 10px;
+      background: #fff;
+      bottom: 10px;
+      z-index: -1;
+    }
+    .cta_inner_text {
+      display: flex;
+      @media #{$tab} {
+        display: block;
+      }
+      h4 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.33;
+        text-align: right;
+        margin-bottom: 0;
+        font-family: $font1;
+        @media #{$tab} {
+          font-size: 20px;
+          text-align: left;
+        }
+        span {
+          display: block;
+          color: $home_secondary;
+        }
+      }
+      .cta_text {
+        position: relative;
+        padding-left: 30px;
+        margin-left: 30px;
+        @media #{$tab} {
+          padding: 0;
+          margin: 0;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+        &::before {
+          position: absolute;
+          left: 0;
+          top: 0;
+          content: "";
+          height: 63px;
+          width: 4px;
+          background: #f5f5f5;
+          @media #{$tab} {
+            display: none;
+          }
+        }
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          color: $home_body;
+          line-height: 2;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .cta_inner_subscribe {
+    }
+  }
+}
+
+.home6_newsletter_area {
+  padding-bottom: 100px;
+  @media #{$tab} {
+    padding-bottom: 80px;
+  }
+  .home6_newsletter_iner {
+    position: relative;
+    z-index: 1;
+    background-image: url(../img/banner/cta_bg2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 48px 70px 48px 90px;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    align-items: center;
+    @media #{ '(min-width: 768px) and (max-width: 1199.98px)'} {
+      padding: 50px 30px;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 30px;
+    }
+    @media #{$tab} {
+      grid-template-columns: 1fr;
+      padding: 30px;
+    }
+    .cta_inner_subscribe {
+      padding-right: 50px;
+      @media #{ '(min-width: 768px) and (max-width: 1199.98px)'} {
+        padding-right: 0;
+      }
+      @media #{$tab} {
+        padding-right: 0;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      right: 10px;
+      background: #fff;
+      bottom: 10px;
+      z-index: -1;
+    }
+    .cta_inner_text {
+      display: flex;
+      @media #{$tab} {
+        display: block;
+      }
+      h4 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.33;
+        text-align: right;
+        margin-bottom: 0;
+        font-family: $font1;
+        @media #{$tab} {
+          font-size: 20px;
+          text-align: left;
+        }
+        span {
+          display: block;
+          color: $home_secondary;
+        }
+      }
+      .cta_text {
+        position: relative;
+        padding-left: 30px;
+        margin-left: 30px;
+        @media #{$tab} {
+          padding: 0;
+          margin: 0;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+        &::before {
+          position: absolute;
+          left: 0;
+          top: 0;
+          content: "";
+          height: 63px;
+          width: 4px;
+          background: #f5f5f5;
+          @media #{$tab} {
+            display: none;
+          }
+        }
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          color: $home_body;
+          line-height: 2;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .cta_inner_subscribe {
+    }
+  }
+}
+
+// home11_brand
+.home11_brand {
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  height: 100px;
+  .single_brand {
+    border-right: 1px solid #ebebeb;
+    height: 100px;
+    img {
+      width: auto;
+    }
+  }
+}

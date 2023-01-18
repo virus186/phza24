@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="addres_close" transform="translate(-625 -417)">
+    <circle id="Ellipse_103" data-name="Ellipse 103" cx="10" cy="10" r="10" transform="translate(625 417)" fill="#ff1d1d"/>
+    <path id="close" d="M4.733,4.136,7.848,1.021A.518.518,0,0,0,7.115.288L4,3.4.885.288a.518.518,0,0,0-.733.733L3.267,4.136.152,7.251a.518.518,0,1,0,.733.733L4,4.869,7.115,7.984a.518.518,0,0,0,.733-.733Zm0,0" transform="translate(631 422.864)" fill="#fff"/>
+  </g>
+</svg>

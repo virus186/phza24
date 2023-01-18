@@ -1,0 +1,88 @@
+.new_user_tabs {
+  grid-gap: 5px;
+  li {
+    .nav-link {
+      font-size: 16px;
+      font-weight: 700;
+      border: 0;
+      background: rgba(#a0160b, 0.3);
+      color: $white;
+      padding: 18px 10px;
+      min-width: 168px;
+      border-radius: 5px 5px 0 0;
+      text-transform: uppercase;
+      @media #{$small_mobile} {
+        padding: 12px 8px;
+        font-size: 13px;
+        min-width: 80px;
+      }
+      &.active {
+        background: $white;
+        color: $home_secondary;
+      }
+    }
+  }
+}
+.new_portfolio_tab {
+  display: flex;
+  grid-gap: 8px;
+  flex-wrap: wrap;
+  .nav-link {
+    border: 1px solid #f1ece8;
+    font-size: 14px;
+    font-weight: 500;
+    color: $body_text;
+    padding: 8px 9px 6px 9px;
+    background: transparent;
+    line-height: 1;
+    border-radius: 5px;
+    text-transform: uppercase;
+    &:hover,
+    &.active {
+      color: $white;
+      background: $home_secondary;
+      border-color: $home_secondary;
+    }
+  }
+}
+.position_user_tab {
+  position: relative;
+  margin-top: -60px;
+  @media #{$small_mobile} {
+    margin-top: -43.5px;
+  }
+}
+.new_user_section {
+  .amaz_pagination {
+    margin-top: 50px;
+    @media #{$small_mobile} {
+      margin-top: 20px;
+    }
+  }
+}
+
+.coupon_gift_box {
+  display: flex;
+  padding: 30px 60px;
+  background: $home_secondary;
+  max-width: 930px;
+  grid-gap: 20px;
+  margin: 5px auto 96px auto;
+  @media #{$small_mobile} {
+    padding: 30px;
+    margin: 5px auto 70px auto;
+    flex-wrap: wrap;
+  }
+  .coupon_gift_box_left {
+  }
+  .coupon_gift_box_right {
+    @include background("../img/amazCat/new_user_coupon2.png");
+    background-size: cover;
+    background-position: center center;
+    flex: 188px 0 0;
+    padding: 20px;
+    @media #{$small_mobile} {
+      flex: 1 0 0;
+    }
+  }
+}

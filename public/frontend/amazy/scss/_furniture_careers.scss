@@ -1,0 +1,20 @@
+.furniture_careers_area{
+    padding: 135px 0 66px 0;
+	@media #{$tab} {
+		padding:63px 0 20px 0;
+	}
+    .career_text_box{
+        p{
+            font-size: 16px;
+            line-height: 1.75;
+            color: #686868;
+        }
+    }
+}
+
+.furniture_contact_area{
+    padding: 110px 0 110px 0;
+	@media #{$tab} {
+		padding:40px 0 40px 0;
+	}
+}

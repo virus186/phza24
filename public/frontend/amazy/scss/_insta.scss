@@ -1,0 +1,859 @@
+.social__Links {
+  a {
+    font-size: 16px;
+    color: #5b6c8f;
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+    &:hover {
+      color: $home_secondary;
+    }
+  }
+  &.style2 {
+    a {
+      color: $home_body;
+      &:hover {
+        color: $home_secondary;
+      }
+    }
+  }
+}
+
+.social__Links2 {
+  a {
+    font-size: 16px;
+    color: white;
+    background-color: #222222;
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    &:not(:last-child) {
+      margin-right: 10px;
+      @media #{$lg_device} {
+        margin-bottom: 10px;
+      }
+    }
+    &:hover {
+      background: $home_secondary;
+      color: $white;
+    }
+  }
+}
+.social__Links3 {
+  a {
+    font-size: 16px;
+    color: $white;
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+    &:hover {
+      color: $home_secondary;
+    }
+  }
+}
+.social__Links4 {
+  a {
+    font-size: 16px;
+    color: white;
+    background-color: $home_secondary;
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    &:not(:last-child) {
+      margin-right: 10px;
+      @media #{$lg_device} {
+        margin-bottom: 10px;
+      }
+    }
+    &:hover {
+      background: $home_primary;
+      color: $white;
+    }
+  }
+}
+
+.social__Links5 {
+  a {
+    font-size: 14px;
+    color: #687083;
+    position: relative;
+    padding: 0 15px;
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 0px;
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 15px;
+        background: #f1f1f1;
+        width: 1px;
+      }
+    }
+    &:hover {
+      color: $home_secondary;
+    }
+  }
+  &.style_2 {
+    a {
+      color: $white;
+      &:not(:last-child) {
+        &::before {
+          background: rgba(241, 241, 241, 0.1);
+        }
+      }
+    }
+  }
+  &.style_3 {
+    a {
+      color: $white;
+      &:not(:last-child) {
+        &::before {
+          background: #4b505d;
+          height: 10px;
+        }
+      }
+    }
+  }
+}
+.instagram_wrapper {
+  position: relative;
+  z-index: 10;
+  &.style2 {
+    .insta_title {
+      h3 {
+        font-size: 20px;
+        color: $home_primary;
+        font-family: $font1;
+        span {
+          font-size: 30px;
+          font-weight: 700;
+          color: $home_secondary;
+        }
+      }
+    }
+  }
+  &.style3 {
+    .insta_title {
+      h3 {
+        font-size: 20px;
+        color: $home_primary;
+        font-family: $font1;
+        span {
+          font-size: 30px;
+          font-weight: 700;
+          color: $home_primary;
+        }
+      }
+    }
+  }
+  &.style4 {
+    .insta_title {
+      h3 {
+        font-size: 20px;
+        color: $home_primary;
+        font-family: $font1;
+        span {
+          font-size: 30px;
+          font-weight: 700;
+          color: $home_secondary;
+        }
+      }
+    }
+  }
+  .insta_title {
+    h3 {
+      font-size: 20px;
+      color: $home_primary;
+      font-family: $font2;
+      span {
+        font-size: 30px;
+        font-weight: 700;
+        color: $home_secondary;
+      }
+    }
+  }
+  .insta_title2 {
+    h3 {
+      font-size: 20px;
+      color: $home_primary;
+      font-family: $font1;
+      span {
+        font-size: 30px;
+        font-weight: 700;
+        color: $home_secondary;
+      }
+    }
+  }
+  .instagram_grids {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+    @media #{$tab} {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media #{$medium_device} {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .single_thumb {
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.theme_mailChimp {
+  // height: 50px;
+  background: transparent;
+  flex-wrap: nowrap;
+  border-radius: 5px;
+  position: relative;
+
+  form {
+    display: grid;
+    grid-template-columns: auto 120px;
+    grid-gap: 0px;
+    border: 0;
+    border-radius: 0px;
+    @media #{$small_mobile} {
+      grid-template-columns: auto;
+    }
+  }
+  .form-control {
+    background: $white;
+    color: $home_primary;
+    font-weight: 400;
+    padding-left: 20px;
+    border-radius: 0;
+    height: 50px;
+    border: 0;
+    font-family: $font1;
+    font-size: 14px;
+    border: 1px solid #f1f1f1;
+    border-right: 0;
+    @media #{$small_mobile} {
+      border-radius: 5px;
+    }
+    &::placeholder {
+      color: #676e8b;
+      font-size: 14px;
+    }
+    &:focus {
+      box-shadow: none !important;
+      z-index: 1;
+    }
+  }
+  button {
+    font-size: 14px;
+    font-weight: 500;
+    color: $white;
+    background: $home_secondary;
+    text-transform: capitalize;
+    border-radius: 0px !important;
+    padding: 0 18px;
+    box-shadow: none !important;
+    // width: 100px;
+    position: relative;
+    right: 0;
+    top: 0;
+    border: 0;
+    height: 50px;
+    font-family: $font1;
+    @media #{$small_mobile} {
+      border-radius: 5px !important;
+    }
+  }
+  .info {
+    font-size: 14px;
+    font-weight: 500;
+    color: $home_primary;
+    position: absolute;
+    left: 0;
+    top: 110%;
+  }
+}
+.theme_mailChimp2 {
+  background: transparent;
+  flex-wrap: nowrap;
+  border-radius: 5px;
+  position: relative;
+  form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    grid-gap: 10px;
+    @media #{$small_mobile} {
+      grid-template-columns: auto;
+    }
+  }
+  .form-control {
+    background: $white;
+    color: $home_primary;
+    font-weight: 400;
+    padding-left: 20px;
+    border-radius: 5px;
+    height: 50px;
+    border: 0;
+    font-family: $font1;
+    font-size: 14px;
+    border-right: 0;
+    border: 0;
+    @media #{$small_mobile} {
+      border-radius: 5px;
+    }
+    &::placeholder {
+      color: #687083;
+      font-size: 14px;
+    }
+    &:focus {
+      box-shadow: none !important;
+      z-index: 1;
+    }
+  }
+  button {
+    font-size: 14px;
+    font-weight: 700;
+    color: $white;
+    background: $home_secondary;
+    text-transform: uppercase;
+    border-radius: 5px !important;
+    padding: 0 38px;
+    box-shadow: none !important;
+    position: relative;
+    right: 0;
+    top: 0;
+    border: 0;
+    height: 50px;
+    font-family: $font1;
+    width: 100%;
+    line-height: 50px;
+  }
+  .info {
+    font-size: 14px;
+    font-weight: 500;
+    color: $home_primary;
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+  }
+}
+
+.theme_mailChimp3 {
+  // height: 50px;
+  background: transparent;
+  flex-wrap: nowrap;
+  border-radius: 5px;
+  position: relative;
+  form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    grid-gap: 10px;
+    @media #{$small_mobile} {
+      grid-template-columns: auto;
+    }
+  }
+  .form-control {
+    background: $white;
+    color: $home_primary;
+    font-weight: 400;
+    padding-left: 20px;
+    border-radius: 5px;
+    height: 50px;
+    border: 0;
+    font-family: $font1;
+    font-size: 14px;
+    border-right: 0;
+    border: 1px solid #e4e4e4;
+    @media #{$small_mobile} {
+      border-radius: 5px;
+    }
+    &::placeholder {
+      color: #656565;
+      font-size: 14px;
+    }
+    &:focus {
+      box-shadow: none !important;
+      z-index: 1;
+    }
+  }
+  button {
+    font-size: 16px;
+    font-weight: 700;
+    color: $white;
+    background: $home_secondary;
+    text-transform: uppercase;
+    border-radius: 5px !important;
+    padding: 0 41px;
+    box-shadow: none !important;
+    // width: 100px;
+    position: relative;
+    right: 0;
+    top: 0;
+    border: 0;
+    height: 50px;
+    font-family: $font1;
+  }
+  .info {
+    font-size: 14px;
+    font-weight: 500;
+    color: $home_primary;
+    position: absolute;
+    left: 0;
+    top: 110%;
+  }
+}
+.theme_mailChimp4 {
+  // height: 50px;
+  background: transparent;
+  flex-wrap: nowrap;
+  border-radius: 5px;
+  position: relative;
+  form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    grid-gap: 10px;
+    @media #{$small_mobile} {
+      grid-template-columns: auto;
+    }
+  }
+  .form-control {
+    background: $white;
+    color: $home_primary;
+    font-weight: 400;
+    padding-left: 20px;
+    border-radius: 0px;
+    height: 50px;
+    border: 0;
+    font-family: $font1;
+    font-size: 12px;
+    border-right: 0;
+    border: 1px solid $white;
+    @media #{$small_mobile} {
+      border-radius: 5px;
+    }
+    &::placeholder {
+      color: $home_body;
+      font-size: 12px;
+    }
+    &:focus {
+      box-shadow: none !important;
+      z-index: 1;
+    }
+  }
+  button {
+    font-size: 14px;
+    font-weight: 700;
+    color: $white;
+    background: $home_secondary;
+    text-transform: uppercase;
+    border-radius: 0px !important;
+    padding: 0 31px;
+    box-shadow: none !important;
+    // width: 100px;
+    position: relative;
+    right: 0;
+    top: 0;
+    border: 0;
+    height: 50px;
+    font-family: $font1;
+  }
+  .info {
+    font-size: 14px;
+    font-weight: 500;
+    color: $home_primary;
+    position: absolute;
+    left: 0;
+    top: 110%;
+  }
+}
+.theme_mailChimp5 {
+  background: $white;
+  flex-wrap: nowrap;
+  border-radius: 0px;
+  position: relative;
+  padding-right: 5px;
+  @media #{$small_mobile} {
+    padding-right: 0px !important;
+  }
+  form {
+    display: grid;
+    grid-template-columns: auto 160px;
+    grid-gap: 0px;
+    border: 0;
+    border-radius: 0px;
+    align-items: center;
+    @media #{$small_mobile} {
+      grid-template-columns: auto;
+    }
+  }
+  .form-control {
+    background: $white;
+    color: $home_primary;
+    font-weight: 400;
+    padding-left: 25px;
+    border-radius: 0;
+    height: 60px;
+    border: 0;
+    font-family: $font1;
+    font-size: 16px;
+    border: 0;
+    border-right: 0;
+    color: $home_primary;
+    @media #{$small_mobile} {
+      border-radius: 5px;
+    }
+    &::placeholder {
+      color: $body_text;
+    }
+    &:focus {
+      box-shadow: none !important;
+      z-index: 1;
+    }
+  }
+  button {
+    font-size: 14px;
+    font-weight: 600;
+    color: $white;
+    background: $home_secondary;
+    text-transform: capitalize;
+    border-radius: 0px !important;
+    padding: 0 18px;
+    box-shadow: none !important;
+    // width: 100px;
+    position: relative;
+    right: 0;
+    top: 0;
+    border: 0;
+    height: 50px;
+    font-family: $font1;
+    @media #{$small_mobile} {
+      border-radius: 0px !important;
+    }
+  }
+  .info {
+    font-size: 14px;
+    font-weight: 500;
+    color: $white;
+    position: absolute;
+    left: 0;
+    top: 110%;
+  }
+}
+.home_six {
+  .theme_mailChimp {
+    // height: 50px;
+    background: transparent;
+    flex-wrap: nowrap;
+    border-radius: 5px;
+    position: relative;
+
+    form {
+      display: grid;
+      grid-template-columns: auto 120px;
+      grid-gap: 0px;
+      border: 0;
+      border-radius: 0px;
+      @media #{$small_mobile} {
+        grid-template-columns: auto;
+        grid-gap: 10px;
+      }
+    }
+    .form-control {
+      background: $white;
+      color: $home_primary;
+      font-weight: 400;
+      padding-left: 20px;
+      border-radius: 0;
+      height: 50px;
+      border: 0;
+      font-family: $font1;
+      font-size: 14px;
+      border: 1px solid #f1f1f1;
+      border-right: 0;
+      border-radius: 5px 0 0 5px;
+
+      @media #{$small_mobile} {
+        border-radius: 5px;
+        border: 1px solid #f1f1f1;
+      }
+      &::placeholder {
+        color: #676e8b;
+        font-size: 14px;
+      }
+      &:focus {
+        box-shadow: none !important;
+        z-index: 1;
+      }
+    }
+    button {
+      font-size: 14px;
+      font-weight: 700;
+      color: $white;
+      background: $home_secondary;
+      text-transform: uppercase;
+      border-radius: 5px !important;
+      padding: 0 18px;
+      box-shadow: none !important;
+      // width: 100px;
+      position: relative;
+      right: 0;
+      top: 0;
+      border: 0;
+      height: 50px;
+      font-family: $font1;
+      @media #{$small_mobile} {
+        border-radius: 5px !important;
+      }
+    }
+    .info {
+      font-size: 14px;
+      font-weight: 500;
+      color: $home_primary;
+      position: absolute;
+      left: 0;
+      top: 110%;
+    }
+  }
+  .home_six_footer {
+    .theme_mailChimp {
+      // height: 50px;
+      background: transparent;
+      flex-wrap: nowrap;
+      border-radius: 5px;
+      position: relative;
+
+      form {
+        display: grid;
+        grid-template-columns: auto 120px;
+        grid-gap: 10px;
+        border: 0;
+        border-radius: 0px;
+        @media #{$small_mobile} {
+          grid-template-columns: auto;
+        }
+      }
+      .form-control {
+        background: $white;
+        color: $home_primary;
+        font-weight: 400;
+        padding-left: 20px;
+        border-radius: 0;
+        height: 50px;
+        border: 0;
+        font-family: $font1;
+        font-size: 14px;
+        border: 1px solid #f1f1f1;
+        border-right: 0;
+        border-radius: 5px;
+        @media #{$small_mobile} {
+          border-radius: 5px;
+        }
+        &::placeholder {
+          color: #676e8b;
+          font-size: 14px;
+        }
+        &:focus {
+          box-shadow: none !important;
+          z-index: 1;
+        }
+      }
+      button {
+        font-size: 14px;
+        font-weight: 700;
+        color: $white;
+        background: $home_secondary;
+        text-transform: uppercase;
+        border-radius: 5px !important;
+        padding: 0 18px;
+        box-shadow: none !important;
+        // width: 100px;
+        position: relative;
+        right: 0;
+        top: 0;
+        border: 0;
+        height: 50px;
+        font-family: $font1;
+        @media #{$small_mobile} {
+          border-radius: 5px !important;
+        }
+      }
+      .info {
+        font-size: 14px;
+        font-weight: 500;
+        color: $white;
+        position: absolute;
+        left: 0;
+        top: 110%;
+      }
+    }
+  }
+}
+
+.home_eight {
+  .theme_mailChimp {
+    // height: 50px;
+    background: transparent;
+    flex-wrap: nowrap;
+    border-radius: 5px;
+    position: relative;
+
+    form {
+      display: grid;
+      grid-template-columns: auto 120px;
+      grid-gap: 0px;
+      border: 0;
+      border-radius: 0px;
+      @media #{$small_mobile} {
+        grid-template-columns: auto;
+        grid-gap: 10px;
+      }
+    }
+    .form-control {
+      background: $white;
+      color: $home_primary;
+      font-weight: 400;
+      padding-left: 20px;
+      border-radius: 0;
+      height: 50px;
+      border: 0;
+      font-family: $font1;
+      font-size: 14px;
+      border: 1px solid #f1f1f1;
+      border-right: 0;
+      border-radius: 5px 0 0 5px;
+
+      @media #{$small_mobile} {
+        border-radius: 5px;
+        border: 1px solid #f1f1f1;
+      }
+      &::placeholder {
+        color: #676e8b;
+        font-size: 14px;
+      }
+      &:focus {
+        box-shadow: none !important;
+        z-index: 1;
+      }
+    }
+    button {
+      font-size: 14px;
+      font-weight: 700;
+      color: $white;
+      background: $home_secondary;
+      text-transform: uppercase;
+      border-radius: 5px !important;
+      padding: 0 18px;
+      box-shadow: none !important;
+      // width: 100px;
+      position: relative;
+      right: 0;
+      top: 0;
+      border: 0;
+      height: 50px;
+      font-family: $font1;
+      @media #{$small_mobile} {
+        border-radius: 5px !important;
+      }
+    }
+    .info {
+      font-size: 14px;
+      font-weight: 500;
+      color: $home_primary;
+      position: absolute;
+      left: 0;
+      top: 110%;
+    }
+  }
+  .home_eight_footer {
+    .theme_mailChimp {
+      // height: 50px;
+      background: transparent;
+      flex-wrap: nowrap;
+      border-radius: 5px;
+      position: relative;
+
+      form {
+        display: grid;
+        grid-template-columns: auto 120px;
+        grid-gap: 10px;
+        border: 0;
+        border-radius: 0px;
+        @media #{$small_mobile} {
+          grid-template-columns: auto;
+        }
+      }
+      .form-control {
+        background: $white;
+        color: $home_primary;
+        font-weight: 400;
+        padding-left: 20px;
+        border-radius: 0;
+        height: 50px;
+        border: 0;
+        font-family: $font1;
+        font-size: 14px;
+        border: 1px solid #f1f1f1;
+        border-right: 0;
+        border-radius: 5px;
+        @media #{$small_mobile} {
+          border-radius: 5px;
+        }
+        &::placeholder {
+          color: #676e8b;
+          font-size: 14px;
+        }
+        &:focus {
+          box-shadow: none !important;
+          z-index: 1;
+        }
+      }
+      button {
+        font-size: 14px;
+        font-weight: 700;
+        color: $white;
+        background: $home_secondary;
+        text-transform: uppercase;
+        border-radius: 5px !important;
+        padding: 0 18px;
+        box-shadow: none !important;
+        // width: 100px;
+        position: relative;
+        right: 0;
+        top: 0;
+        border: 0;
+        height: 50px;
+        font-family: $font1;
+        @media #{$small_mobile} {
+          border-radius: 5px !important;
+        }
+      }
+      .info {
+        font-size: 14px;
+        font-weight: 500;
+        color: $home_primary;
+        position: absolute;
+        left: 0;
+        top: 110%;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.payment_method_area {
+}
+.single_payment_method {
+  &.style_2 .col-xl-8 .row {
+    flex-direction: row-reverse;
+    .payment_icon {
+      text-align: right;
+      @media #{$tab} {
+        text-align: left;
+      }
+    }
+  }
+  &:not(:last-child) {
+    padding-bottom: 98px;
+  }
+  .payment_icon {
+    img {
+    }
+  }
+  .paymnt_text_box {
+    max-width: 521px;
+    .home10_title {
+      h3 {
+      }
+      p {
+        line-height: 1.75;
+        margin: 23px 0 24px;
+      }
+    }
+    .paymnt_bulet_lists {
+      .single_payment_list {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 6px;
+        &::before {
+          content: "";
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #fd6700;
+          position: absolute;
+          top: 7px;
+          left: 0;
+        }
+        p {
+          font-size: 16px;
+          font-weight: 500;
+          font-family: $font1;
+          color: $home_primary;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,210 @@
+.prodcuts_area {
+  padding: 80px 0 80px 0;
+  @media #{$tab} {
+    padding: 41px 0 40px 0;
+  }
+  &.product_full_column {
+    @media #{$min_large} {
+      margin: 0 55px;
+    }
+  }
+  .product_category_chose {
+    .course_title {
+      margin-bottom: 15px;
+      svg {
+        margin-right: 10px;
+      }
+    }
+    .rating_lists {
+      li {
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+      .ratings {
+        display: flex;
+        align-items: center;
+
+        i {
+          font-size: 15px;
+          color: #ffc107;
+          margin-right: 4px;
+          &.unrated {
+            color: #f1f1f1;
+          }
+        }
+        span {
+          font-size: 14px;
+          font-weight: 500;
+          color: $home_body;
+          display: inline-block;
+          margin-left: 11px;
+        }
+      }
+    }
+  }
+  .course_category_inner {
+    border: 1px solid #f1ece8;
+    padding: 25px 30px 30px 30px;
+    .single_pro_categry {
+      h4 {
+        font-size: 18px;
+        font-weight: 700;
+        border-bottom: 1px solid #f1f1f1;
+        margin-bottom: 18px;
+        padding-bottom: 11px;
+        display: block;
+      }
+      .color_filter {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+        grid-gap: 10px;
+        padding: 0px;
+        margin-bottom: 30px;
+      }
+      .filter_wrapper {
+        padding-top: 5px;
+        #slider-range {
+          background: #f1ece8;
+          height: 6px;
+          border-radius: 30px;
+          border: 0;
+          .ui-slider-range {
+            background: $home_secondary;
+          }
+          .ui-slider-handle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 1px solid $home_secondary !important ;
+            background: #fff !important ;
+            top: -3px;
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+        .prise_line {
+          margin-top: 30px;
+          overflow: hidden;
+          span {
+            font-size: 14px;
+            font-weight: 500;
+            color: $home_body;
+            margin-right: 5px;
+          }
+          input {
+            border: 0;
+            font-size: 14px;
+            color: $home_secondary;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  .box_header {
+    border-bottom: 1px solid #f1ece8;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    h5 {
+      font-family: $font1;
+    }
+    .box_header_right {
+      @media #{$small_mobile} {
+        margin-top: 10px;
+      }
+    }
+  }
+  .grid_shorting_style {
+    margin-left: 1px;
+    .product_wized {
+      margin-right: -1px;
+      margin-top: -1px;
+    }
+  }
+}
+
+.Check_sidebar {
+  li {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.prduct_showing_style {
+  margin-right: 3px;
+  li:not(:last-child) {
+    margin-right: 17px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.custom_product_banner {
+  @include background("../img/home_10/custom_pro_banner.jpg");
+  padding: 132px 120px 131px 120px;
+  @media #{$tab} {
+    padding: 60px 30px 60px 30px;
+  }
+  .custom_product_text {
+    max-width: 360px;
+    span {
+      font-size: 14px;
+      font-weight: 700;
+      color: $home_secondary;
+    }
+    h3 {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.5;
+      margin: 5px 0 28px 0;
+      @media #{$tab} {
+        font-size: 25px;
+        margin: 2px 0 20px 0;
+      }
+    }
+    a {
+    }
+  }
+}
+
+// collection_box
+.collection_bg_1 {
+  @include background("../img/home_10/collection_1.png");
+}
+.collection_bg_2 {
+  @include background("../img/home_10/collection_2.png");
+}
+.collection_bg_3 {
+  @include background("../img/home_10/collection_3.png");
+}
+.collection_bg_4 {
+  @include background("../img/home_10/collection_4.png");
+}
+.collection_bg_5 {
+  @include background("../img/home_10/collection_5.png");
+}
+.collection_bg_6 {
+  @include background("../img/home_10/collection_6.png");
+}
+.collection_bg_7 {
+  @include background("../img/home_10/collection_7.png");
+}
+.collection_bg_8 {
+  @include background("../img/home_10/collection_8.png");
+}
+.collection_box {
+  height: 510px;
+  @media #{$tab} {
+    height: 400px;
+  }
+  &.style_2 {
+    height: 360px;
+    @media #{$tab} {
+      height: 300px;
+    }
+  }
+}

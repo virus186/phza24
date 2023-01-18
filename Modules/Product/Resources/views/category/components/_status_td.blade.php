@@ -1,0 +1,1 @@
+<span class="{{$category->status==1?'badge_1':'badge_2'}}">{{ showStatus($category->status) }}</span>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21.174" height="14.998" viewBox="0 0 21.174 14.998">
+  <g id="laptop99" transform="translate(0 -74.667)">
+    <g id="Group_1605" data-name="Group 1605" transform="translate(1.764 74.667)">
+      <g id="Group_1604" data-name="Group 1604" transform="translate(0 0)">
+        <path id="Path_1913" data-name="Path 1913" d="M58.988,74.667h-15a1.325,1.325,0,0,0-1.323,1.323V86.577a.441.441,0,1,0,.882,0V75.99a.441.441,0,0,1,.441-.441h15a.441.441,0,0,1,.441.441V86.577a.441.441,0,1,0,.882,0V75.99A1.325,1.325,0,0,0,58.988,74.667Z" transform="translate(-42.667 -74.667)" fill="#00124e"/>
+      </g>
+    </g>
+    <g id="Group_1607" data-name="Group 1607" transform="translate(0 86.136)">
+      <g id="Group_1606" data-name="Group 1606" transform="translate(0 0)">
+        <path id="Path_1914" data-name="Path 1914" d="M20.733,352H.441a.441.441,0,0,0-.441.441v.882a2.209,2.209,0,0,0,2.206,2.206H18.968a2.209,2.209,0,0,0,2.206-2.206v-.882A.441.441,0,0,0,20.733,352Zm-.441,1.323a1.325,1.325,0,0,1-1.323,1.323H2.206a1.325,1.325,0,0,1-1.323-1.323v-.441H20.291v.441Z" transform="translate(0 -352)" fill="#00124e"/>
+      </g>
+    </g>
+  </g>
+</svg>

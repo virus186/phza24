@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="addess_edit" transform="translate(-625 -417)">
+    <circle id="Ellipse_103" data-name="Ellipse 103" cx="10" cy="10" r="10" transform="translate(625 417)" fill="#00c14a"/>
+    <g id="edit" transform="translate(624.674 421.499)">
+      <path id="Path_1990" data-name="Path 1990" d="M182.359,73.371a.327.327,0,0,0-.088.165l-.457,2.284a.323.323,0,0,0,.317.386.307.307,0,0,0,.063-.006l2.283-.457a.322.322,0,0,0,.165-.089l5.11-5.11-2.283-2.283Zm0,0" transform="translate(-176.481 -65.709)" fill="#fff"/>
+      <path id="Path_1991" data-name="Path 1991" d="M394.622.973a1.616,1.616,0,0,0-2.283,0l-.894.894,2.283,2.283.894-.894a1.614,1.614,0,0,0,0-2.283Zm0,0" transform="translate(-379.772)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

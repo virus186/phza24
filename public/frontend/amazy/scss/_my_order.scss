@@ -1,0 +1,118 @@
+.my_order_area {
+  padding: 130px 0 140px 0;
+  @media #{$tab} {
+    padding: 70px 0 70px 0;
+  }
+}
+.table.my_order_table {
+  border-radius: 5px;
+  border-collapse: collapse;
+  border-radius: 5px;
+  // border-style: hidden;
+
+  thead {
+    tr {
+      th {
+        font-size: 16px;
+        font-weight: 500;
+        color: $home_primary;
+        border-top: 0;
+        border-bottom: 0;
+        padding: 10px 10px 10px 30px;
+        font-family: $font1;
+        border-bottom: 1px solid #f1f1f1 !important;
+        padding-left: 0;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        font-family: $font1;
+        color: #676e8b;
+        font-size: 16px;
+        vertical-align: middle;
+        padding: 20px 30px 20px 0;
+        white-space: nowrap;
+        font-weight: 400;
+        border-bottom: 1px solid #f1f1f1;
+        padding-left: 0;
+        // &:nth-child(1){
+        //     border-top: 1px solid #E1E2E6;
+        // }
+        // &:last-child{
+        //     border-top: 1px solid #E1E2E6;
+        // }
+      }
+    }
+  }
+}
+
+// my_address_area
+.my_address_area {
+  padding: 140px 0 104px 0;
+  @media #{$tab} {
+    padding: 70px 0 40px 0;
+  }
+  &.style_2 {
+    padding: 130px 0 110px 0;
+    @media #{$tab} {
+      padding: 70px 0 40px 0;
+    }
+  }
+  .my_address_inner {
+    max-width: 690px;
+    margin: 0 auto;
+    .notify_text {
+      display: flex;
+      align-items: center;
+      background: #fcfcfc;
+      border-radius: 5px;
+      padding: 12px 20px;
+      margin: 45px 0 45px 0;
+      i {
+        font-size: 18px;
+        font-weight: 400;
+        color: $home_secondary;
+        margin-right: 20px;
+      }
+      p {
+        font-size: 16px;
+        color: $home_body;
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+    }
+    .single_addressLine {
+      h3 {
+        font-size: 30px;
+        color: $home_primary;
+        font-weight: 700;
+        margin-bottom: 13px;
+        .edit_text {
+          margin-left: 39px;
+          position: relative;
+          display: inline-block;
+          top: 4px;
+          color: $home_secondary;
+        }
+        @media #{$tab} {
+          font-size: 25px;
+        }
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        color: $home_body;
+        line-height: 1.63;
+        margin-bottom: 17px;
+        br {
+          display: inline-block;
+        }
+      }
+      .theme_btn {
+        margin-top: 15px;
+      }
+    }
+  }
+}

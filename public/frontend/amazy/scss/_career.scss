@@ -1,0 +1,131 @@
+.career_extraordinary_area {
+  padding: 132px 0 107px 0;
+  @media #{$tab} {
+    padding: 70px 0 40px 0;
+  }
+  .home10_title {
+    margin-bottom: 57px;
+    @media #{$tab} {
+      margin-bottom: 30px;
+    }
+    h3 {
+      margin-bottom: 23px;
+      @media #{$tab} {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .career_extraordinary_banner {
+    img {
+      width: 100%;
+    }
+  }
+  .career_extraordinary_content {
+    margin: 40px 0 0 0;
+    h4 {
+      font-size: 30px;
+      font-weight: 700;
+      color: $home_primary;
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.career_wrapper {
+  .tab_reverse {
+    @media #{$tab} {
+      flex-wrap: wrap-reverse;
+    }
+    @media #{$tab2} {
+      flex-wrap: wrap-reverse;
+    }
+  }
+  .career_banner {
+    img {
+      width: 100%;
+    }
+  }
+  .career_info {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 80px 30px 80px 80px;
+    @media #{$tab} {
+      padding: 30px 0px 80px 0px;
+    }
+    .career_info_inner {
+      max-width: 525px;
+      h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 22px;
+        @media #{$tab} {
+          font-size: 25px;
+        }
+      }
+      p {
+      }
+    }
+    .circle_lists {
+      li {
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        color: $home_primary;
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+        span {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          border: 2px solid #ebebeb;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+.career_available_area {
+  padding: 132px 0 104px 0;
+  background: #f5f5f5;
+  @media #{$tab} {
+    padding: 70px 0 40px 0;
+  }
+  .single_career_available {
+    .thumb {
+      overflow: hidden;
+      img {
+        width: 100%;
+        transition: 0.3s;
+        transform: scale(1);
+      }
+    }
+    .career_available_content {
+      h4 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 20px 0 5px 0;
+      }
+      p {
+      }
+    }
+    &:hover {
+      .thumb {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.availabale_position_area {
+  padding: 133px 0 101px 0;
+  @media #{$tab} {
+    padding: 73px 0 40px 0;
+  }
+}

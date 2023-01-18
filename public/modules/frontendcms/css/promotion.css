@@ -1,0 +1,16 @@
+
+#blogImgShow{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    max-height: 150px;
+}
+
+.img_div {
+    display: flex;
+    height: 153px;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+}
+

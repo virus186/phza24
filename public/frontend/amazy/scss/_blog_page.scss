@@ -1,0 +1,74 @@
+.fur_blog_section {
+  padding: 140px 0 102px 0;
+  @media #{$tab} {
+    padding: 70px 0 40px 0;
+  }
+  .fur_pagination {
+    padding-top: 68px;
+    @media #{$tab} {
+      padding-top: 40px;
+    }
+  }
+}
+.fur_blog_section2 {
+  padding: 140px 0 131px 0;
+  @media #{$tab} {
+    padding: 70px 0 61px 0;
+  }
+  .fur_pagination {
+    padding-top: 43px;
+    @media #{$tab} {
+      padding-top: 20px;
+    }
+  }
+}
+.blog_sidebar_box {
+  border: 1px solid #e3e6ef;
+  padding: 30px;
+}
+
+.keyword_lists {
+  a {
+    font-size: 14px;
+    font-family: $font1;
+    font-weight: 400;
+    color: $home_body;
+    border-radius: 3px;
+    background: #fcfdfd;
+    display: inline-block;
+    padding: 7px 15.15px;
+    border: 1px solid #eef0f4;
+    &:hover {
+      background: $home_secondary;
+      border-color: $home_secondary;
+      color: $white;
+    }
+  }
+}
+
+.news_lists {
+  .single_newslist {
+    &:not(:last-child) {
+      border-bottom: 1px solid #e3e6ef;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
+    h4 {
+      font-size: 18px;
+      font-weight: 700;
+      transition: 0.3s;
+      color: $home_primary;
+      line-height: 1.44;
+      font-family: $font1;
+      text-transform: capitalize;
+      margin: 0px 0 2px 0;
+      &:hover {
+        color: $home_secondary;
+      }
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.63;
+    }
+  }
+}

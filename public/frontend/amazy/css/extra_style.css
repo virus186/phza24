@@ -1,0 +1,1729 @@
+.product_action a{
+  cursor: pointer;
+}
+
+.filter-by-rating-one{
+    margin-left: 46%;
+}
+
+.filter-by-ratings{
+  margin-left: 24%;
+}
+
+.refresh_btn{
+  margin-left: 35%;
+}
+.ml_10{
+margin-left: 10px!important;
+}
+#pre-loader{
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 9999999999999;
+overflow: hidden;
+outline: 0;
+height: 100%;
+width: 100%;
+}
+
+.paginate_disabled {
+pointer-events: none;
+cursor: default;
+opacity: 0.6;
+}
+.empty_p {
+margin: 0 auto;
+width: 100%;
+text-align: center;
+margin-top: 100px;
+min-height: 100px;
+}
+.cursor_pointer{
+cursor: pointer!important;
+}
+.ml_15{
+margin-left: 15px!important;
+}
+.pd_12{
+padding: 12px!important;
+}
+.product_widget5 .product_thumb_upper .badge_1 {
+width: auto;
+}
+h4.test-center.compare_empty {
+width: 100%;
+text-align: center;
+margin-top: 100px;
+}
+.compare_title_div{
+  display: flex;
+  justify-content: space-between;
+}
+.is_wishlist{
+color: #fd4949!important;
+}
+.stock_value{
+font-size: 14px!important;
+font-weight: 500!important;
+color: #00124e!important;
+}
+.tag_link{
+font-size: 14px!important;
+font-weight: 500!important;
+color: #00124e!important;
+cursor: pointer;
+}
+.single_reviews .thumb {
+overflow: hidden;
+}
+.single_reviews .thumb img{
+max-width: 100%;
+margin-top: -6px;
+}
+.zoomLens {
+min-height: 120px;
+min-width: 120px;
+}
+
+.round_checkbox input:checked ~ .checkmark {
+border-color: transparent;
+}
+.round_checkbox .checkmark::before {
+width: 31px;
+height: 31px;
+background: none;
+left: 1px;
+top: 1px;
+
+}
+.round_checkbox input:checked ~ .checkmark::before{
+box-shadow: inset 0px 0px 0px 4px #f4f4f4;
+}
+.color_List .size_btn {
+display: inline-block;
+border: 1px solid #e5dede;
+padding: 6px 19px;
+text-transform: uppercase;
+color: var(--text_color);
+margin-bottom: 10px;
+font-weight: 300;
+background-color: #fff;
+cursor: pointer;
+}
+.selected_btn{
+border-color: #fd4949!important;
+}
+.product_quick_view .product_details_img{
+background-size: auto;
+}
+
+.product_details_wrapper .product_content_details .stokeout_badge {
+font-size: 12px;
+font-weight: 700;
+background: #fd4949!important;;
+color: #fff;
+border-radius: 2px;
+padding: 4px 7px;
+}
+.w-40{
+width: 40%;
+}
+.amaz_select3 {
+min-width: 145px;
+}
+.style_5{
+  color: var(--background_color)!important;
+  background-color: #fd4949!important;
+}
+.payemntgateway_test{
+  font-size: 55px;
+  transform: rotate(-20deg);
+}
+.summery_modal_body .summery_order_box .summery_order_body {
+padding: 10px 20px 18px 20px;
+}
+.promotion_bar_wrapper .close_promobar i {
+color: var(--background_color);
+}
+.promotion_bar_wrapper .close_promobar {
+  background-color: var(--base_color);
+}
+.recomanded_discount span{
+margin-left: -22px;
+margin-top: -40px;
+}
+.add_cart{
+cursor: pointer;
+}
+.flex_100{
+flex: 100%!important;
+}
+.flex_50{
+flex: 50%!important;
+}
+.flex_33{
+flex: 33.33%!important;
+}
+.flex_25{
+flex: 25%!important;
+}
+
+@media (max-width: 991px) {
+.header_topbar_area{
+  display: none!important;
+}
+}
+
+.amaz_cat_bg1 {
+background-image: none;
+background-color: rgb(169 152 114 / 8%);
+}
+.amaz_home_cartBox {
+padding: 20px 30px;
+}
+.amaz_home_cartBox .img_box {
+width: 110px;
+height: 110px;
+justify-content: center;
+align-items: center;
+display: flex;
+}
+.amaz_home_cartBox .img_box img{
+max-width: 100%;
+}
+.home_banner .owl-stage-outer{
+max-height: 600px;
+}
+.message_div, .message_div_modal {
+min-height: 40px;
+padding: 10px;
+margin-top: 10px;
+background: rgba(187,63,63,.12941176470588237);
+width: 100%;
+}
+
+/* search */
+.live-search li {
+border-right: 0!important;
+border-left: 0!important;
+}
+.live-search ul li:first-child {
+border-top: 0!important;
+}
+.live-search ul li:last-child {
+border-bottom: 0!important;
+}
+.live-search ul {
+border: 1px solid var(--border_color)!important;
+display: none;
+border-top: 0!important;
+}
+
+.live-search ul {
+list-style: none;
+margin: 0;
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+z-index: 123;
+background: #f9f9fd;
+}
+.live-search ul .search_item .search_title {
+display: flex;
+justify-content: flex-end;
+background: #fff;
+padding: 8px 10px;
+font-size: 12px;
+text-transform: uppercase;
+color: #222222;
+}
+
+.live-search .tags_list a{
+font-size: 14px;
+font-weight: 400;
+color: #222222;
+line-height: 2;
+}
+.live-search .tags_list a:hover{
+color: #ff0027;
+}
+.live-search .search_category_list a{
+font-size: 14px;
+font-weight: 400;
+color: #ff0027;
+line-height: 2
+}
+.seach_list_padding{
+padding: 10px 22px;
+}
+.live-search .Products_list a{
+font-size: 16px;
+font-weight: 400;
+color: #ff0027;
+margin: 5px 0px;
+}
+.live-search .Products_list .product_info_text h4{
+font-size: 14px;
+font-weight: 400;
+}
+.live-search .Products_list .product_info_text .prise_tag{
+font-size: 14px;
+font-weight: 400;
+}
+.live-search .Products_list .product_info_text .prev_prise{
+font-size: 14px;
+font-weight: 400;
+text-decoration: line-through;
+color: #222222;
+}
+.live-search .Products_list .product_info_text .current_prise{
+font-size: 16px;
+font-weight: 500;
+color: #ff0027;
+}
+.product_available{
+background: green;
+font-size: 12px;
+font-weight: 400;
+color: #fff;
+border-radius: 3px;
+display: inline-block;
+padding: 2px 8px;
+}
+.product_stockout{
+background: #ff0027;
+font-size: 12px;
+font-weight: 400;
+color: #fff;
+border-radius: 3px;
+display: inline-block;
+padding: 2px 8px;
+}
+.live-search .product_info_text h4{
+font-size: 14px;
+font-weight: 400
+}
+.live-search .product_info_text p{
+font-size: 14px;
+font-weight: 400
+}
+.live-search .thumb {
+width: 55px;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 55px;
+}
+
+.live-search .thumb img {
+max-width: 100%;
+max-height: 55px;
+}
+.highlight{
+font-weight: 500;
+}
+.search_empty_list_div {
+padding: 20px;
+margin: 0 auto;
+text-align: center;
+}
+.search_empty_list_div p {
+font-size: 16px;
+font-weight: 400;
+}
+.search_empty_list_div p strong{
+font-weight: 500;
+}
+.search_history{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+padding: 10px 20px;
+background: #fff;
+}
+.search_history strong{
+cursor: pointer;
+}
+.highlight {
+font-weight: 600;
+}
+.cart_thumb_div .thumb{
+width: 100px;
+height: 100px;
+display: flex;
+align-items: center;
+justify-content: start;
+}
+.cart_thumb_div .thumb img{
+max-width: 100%;
+max-height: 100%;
+}
+.primary_input3.style6 {
+border-color: #e3e3e3;
+padding: 2px 20px;
+height: 45px;
+color: #00124e;
+}
+
+.review_img_div{
+  display: flex;
+  height: 150px;
+  width: 150px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  grid-gap: 5px;
+  margin-top: 10px;
+}
+.review_img_div img{
+  max-width: 100%;
+  border: 1px dashed #ebebeb;
+  padding: 5px;
+  max-height: 145px;
+  max-width: 145px;
+}
+.blog_login_required {
+margin-top: 40px;
+}
+.blog_login_required h4 a {
+color: #fd4949;
+}
+
+.House_Appliances_product .product_widget5.style4 .thumb {
+text-align: center;
+width: 140px;
+height: 140px;
+align-items: center;
+justify-content: center;
+margin: 0 auto;
+display: flex;
+}
+.House_Appliances_widget .House_Appliances_widget_right {
+background-image: none;
+}
+
+@media (max-width: 575.98px) {
+.House_Appliances_widget_right{
+  display: none;
+}
+}
+
+********* marcent css *********/
+/* line 2, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_marchant.scss */
+.marcent_content {
+text-align: center;
+}
+
+/* line 4, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_marchant.scss */
+.marcent_content h5 {
+font-size: 16px;
+text-transform: uppercase;
+margin-bottom: 26px;
+}
+
+/* line 9, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_marchant.scss */
+.marcent_content span {
+display: block;
+margin-top: 20px;
+}
+
+/* line 13, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_marchant.scss */
+.marcent_content .btn_1 {
+margin-top: 42px;
+}
+
+/* line 18, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_marchant.scss */
+.benefits_content .single_benefits_content {
+padding-right: 117px;
+}
+
+@media (max-width: 991px) {
+/* line 18, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_marchant.scss */
+.benefits_content .single_benefits_content {
+  padding-right: 0;
+  margin-bottom: 30px;
+}
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+/* line 18, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_marchant.scss */
+.benefits_content .single_benefits_content {
+  padding-right: 0;
+  margin-bottom: 30px;
+}
+}
+
+/* line 29, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_marchant.scss */
+.benefits_content .single_benefits_content h4 {
+font-size: 18px;
+line-height: 27px;
+padding: 19px 0 23px;
+}
+
+@media (max-width: 991px) {
+/* line 29, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_marchant.scss */
+.benefits_content .single_benefits_content h4 {
+  padding: 10px 0 0;
+}
+}
+
+/********* work process scss *********/
+/* line 2, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+.work_process {
+overflow: hidden;
+}
+
+/* line 5, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+.work_process .section_tittle p {
+margin-bottom: 106px;
+}
+
+@media (max-width: 991px) {
+/* line 5, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+.work_process .section_tittle p {
+  margin-bottom: 14px;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+/* line 5, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+.work_process .section_tittle p {
+  margin-bottom: 80px;
+}
+}
+
+/* line 15, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+.work_process .work_process_single {
+text-align: center;
+padding: 51px 50px 40px;
+border: 1px solid #e2e6eb;
+width: 45%;
+position: relative;
+}
+
+/* line 21, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+.work_process .work_process_single img {
+position: absolute;
+top: -35px;
+left: 0;
+right: 0;
+margin: 0 auto;
+background-color: #fff;
+padding: 0 20px;
+}
+
+/* line 30, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+.work_process .work_process_single h4 {
+font-size: 18px;
+font-weight: 500;
+margin-bottom: 28px;
+}
+
+@media (max-width: 991px) {
+/* line 30, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+.work_process .work_process_single h4 {
+  margin-bottom: 15px;
+}
+}
+
+/* line 39, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+.work_process .left_line {
+position: relative;
+z-index: 1;
+}
+
+/* line 42, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+.work_process .left_line:after {
+position: absolute;
+left: 0;
+top: 10%;
+}
+
+/* line 68, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline {
+width: 100%;
+margin: 0 auto;
+position: relative;
+-webkit-transition: all 0.4s ease;
+-moz-transition: all 0.4s ease;
+-ms-transition: all 0.4s ease;
+transition: all 0.4s ease;
+}
+
+/* line 73, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline .timeline-item {
+position: relative;
+display: inline-block;
+width: 100%;
+}
+
+/* line 77, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline .timeline-item:after {
+position: absolute;
+content: "";
+right: -40%;
+top: 27%;
+background: url(../img/time_line_1.png) no-repeat;
+width: 100%;
+z-index: 1;
+height: 100px;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+/* line 77, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline .timeline-item:after {
+  right: -29%;
+}
+}
+
+/* line 90, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline .timeline-item .timeline-content {
+width: 39%;
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+transition: all 0.3s ease;
+background-color: #fff;
+position: relative;
+z-index: 3;
+}
+
+/* line 98, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline .timeline-item:nth-child(even):after {
+position: absolute;
+content: "";
+right: 0;
+left: 32%;
+top: 27%;
+background: url(../img/time_line_2.png) no-repeat;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+/* line 98, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline .timeline-item:nth-child(even):after {
+  left: 13%;
+}
+}
+
+/* line 109, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline .timeline-item:nth-child(even) .timeline-content {
+float: right;
+}
+
+/* line 114, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline .timeline-item:last-child:after {
+display: none;
+}
+
+@media (max-width: 575px) {
+/* line 123, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline:before {
+  left: 0;
+}
+/* line 126, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline .timeline-item {
+  margin-top: 60px;
+}
+/* line 128, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline .timeline-item .timeline-content {
+  width: 100%;
+}
+/* line 130, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline .timeline-item .timeline-content:before, #timeline .timeline-item .timeline-content.right:before {
+  left: 10%;
+  margin-left: -6px;
+  border-left: 0;
+}
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+/* line 141, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline:before {
+  left: 0;
+}
+/* line 144, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline .timeline-item {
+  margin-top: 60px;
+}
+/* line 146, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline .timeline-item .timeline-content {
+  width: 60%;
+}
+/* line 148, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_work_process.scss */
+#timeline .timeline-item .timeline-content:before, #timeline .timeline-item .timeline-content.right:before {
+  left: 10%;
+  margin-left: -6px;
+  border-left: 0;
+}
+}
+
+/******* pricing part ********/
+/* line 3, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .price_truggle {
+justify-content: center;
+margin-bottom: 80px;
+align-items: center;
+}
+
+@media (max-width: 991px) {
+/* line 3, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .price_truggle {
+  margin-bottom: 40px;
+}
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+/* line 3, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .price_truggle {
+  margin-bottom: 60px;
+}
+}
+
+/* line 14, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .price_truggle p {
+line-height: 16px;
+padding-right: 18px;
+padding-left: 18px;
+}
+
+/* line 18, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .price_truggle label {
+margin-bottom: 0;
+}
+
+/* line 23, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .product_tricker {
+position: relative;
+z-index: 1;
+}
+
+/* line 26, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .product_tricker:after {
+position: absolute;
+content: "";
+right: -6px;
+top: -6px;
+background-image: url(../img/pricing_tricker.png);
+width: 100%;
+height: 100%;
+background-repeat: no-repeat;
+background-position: top right;
+z-index: -1;
+}
+
+/* line 39, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .product_tricker_text {
+text-transform: uppercase;
+font-size: 12px;
+font-weight: 300;
+color: #fff;
+position: absolute;
+right: -1px;
+z-index: 2;
+transform: rotate(45deg);
+top: 25px;
+}
+
+/* line 50, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .single_pricing_part {
+padding: 50px;
+border: 1px solid #e2e6eb;
+text-align: center;
+padding: 47px 50px 50px;
+}
+
+@media (max-width: 991px) {
+/* line 50, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .single_pricing_part {
+  padding: 30px;
+  margin-bottom: 30px;
+}
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+/* line 50, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .single_pricing_part {
+  padding: 30px;
+  margin-bottom: 30px;
+}
+}
+
+/* line 63, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .single_pricing_part h5 {
+font-size: 18px;
+}
+
+/* line 66, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .single_pricing_part h2 {
+font-size: 40px;
+font-weight: 700;
+margin-top: 48px;
+margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+/* line 66, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .single_pricing_part h2 {
+  margin-top: 20px;
+  font-size: 25px;
+}
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+/* line 66, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .single_pricing_part h2 {
+  margin-top: 20px;
+  font-size: 30px;
+}
+}
+
+/* line 80, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .single_pricing_part ul {
+list-style: none;
+padding: 31px 0 0 0;
+}
+
+@media (max-width: 991px) {
+/* line 80, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .single_pricing_part ul {
+  padding: 0;
+}
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+/* line 80, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .single_pricing_part ul {
+  padding: 10px 0 0 0;
+}
+}
+
+/* line 89, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .single_pricing_part ul li {
+margin: 15px 0;
+font-size: 16px;
+color: #8f8f8f;
+font-weight: 300;
+}
+
+/* line 96, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .single_pricing_part .pricing_header {
+padding-bottom: 44px;
+border-bottom: 1px solid #e2e6eb;
+}
+
+@media (max-width: 991px) {
+/* line 96, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .single_pricing_part .pricing_header {
+  padding-bottom: 20px;
+}
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+/* line 96, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .single_pricing_part .pricing_header {
+  padding-bottom: 20px;
+}
+}
+
+/* line 106, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .single_pricing_part .btn_2 {
+background-color: var(--background_color);
+border: 1px solid #e2e6eb;
+color: var(--text_color) !important;
+margin-top: 28px;
+font-weight: 500;
+padding: 16px 47px;
+line-height: 16px;
+}
+
+/* line 114, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.pricing_part .single_pricing_part .btn_2:hover {
+border: 1px solid var(--base_color);
+background-color: var(--base_color);
+color: #fff !important;
+}
+
+/* line 122, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.switch-toggle {
+position: relative;
+display: inline-block;
+width: 70px;
+height: 20px;
+border-radius: 25px;
+background-color: var(--background_color);
+border: 1px solid var(--border_color);
+}
+
+/* line 130, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.switch-toggle input {
+display: none;
+}
+
+/* line 133, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.switch-toggle div {
+position: absolute;
+border-radius: 50%;
+background-color: var(--base_color);
+transition: .1s ease;
+box-shadow: 2.071px 7.727px 30px 0px rgba(211, 0, 98, 0.45);
+}
+
+/* line 140, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.switch-toggle input:checked + div {
+left: 62%;
+background-color: var(--base_color);
+}
+
+/* line 145, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_pricing_part.scss */
+.switch-toggle.outer div {
+width: 26px;
+height: 26px;
+top: -4px;
+left: -3px;
+}
+
+/******** ferquently question part css *******/
+/* line 2, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_accordion.scss */
+.ferquently_question_part {
+background-color: #fff;
+}
+
+@media (max-width: 991px) {
+/* line 2, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_accordion.scss */
+.ferquently_question_part {
+  padding: 40px 0 70px;
+}
+}
+
+/* line 7, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_accordion.scss */
+.ferquently_question_part .single_ferquently_question {
+border-bottom: 1px solid #d7dbe3;
+}
+
+/* line 9, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_accordion.scss */
+.ferquently_question_part .single_ferquently_question:last-child {
+border-bottom: 0px solid transparent;
+}
+
+/* line 12, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_accordion.scss */
+.ferquently_question_part .single_ferquently_question p {
+padding-bottom: 30px;
+}
+
+/* line 16, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_accordion.scss */
+.ferquently_question_part .accordion {
+background-color: #fff;
+color: var(--text_color);
+cursor: pointer;
+padding: 21px 18px 17px;
+width: 100%;
+border: none;
+text-align: left;
+outline: none;
+font-size: 16px;
+transition: 0.4s;
+position: relative;
+}
+
+@media (max-width: 991px) {
+/* line 16, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_accordion.scss */
+.ferquently_question_part .accordion {
+  padding-right: 45px;
+}
+}
+
+/* line 33, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_accordion.scss */
+.ferquently_question_part .active, .ferquently_question_part .accordion:hover {
+background-color: var(--background_color);
+}
+
+/* line 37, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_accordion.scss */
+.ferquently_question_part .accordion:after {
+content: "\e61a";
+color: #777;
+font-weight: bold;
+float: right;
+margin-left: 5px;
+font-family: 'themify';
+right: 18px;
+position: absolute;
+top: 35%;
+}
+
+/* line 49, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_accordion.scss */
+.ferquently_question_part .active:after {
+content: "\e622";
+}
+
+/* line 53, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_accordion.scss */
+.ferquently_question_part .panel {
+padding: 0 18px;
+background-color: var(--background_color);
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
+}
+
+/* line 60, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_accordion.scss */
+.ferquently_question_part p {
+font-size: 14px;
+line-height: 26px;
+}
+
+/*********** send query css here *************/
+/* line 3, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_send_query.scss */
+.send_query form {
+background-color: #fff;
+padding: 75px 80px 80px;
+}
+
+@media (max-width: 991px) {
+/* line 3, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_send_query.scss */
+.send_query form {
+  padding: 20px 20px 30px;
+}
+}
+
+/* line 10, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_send_query.scss */
+.send_query .form-group {
+margin-bottom: 23px;
+}
+
+/* line 12, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_send_query.scss */
+.send_query .form-group label {
+text-transform: uppercase;
+font-size: 11px;
+color: var(--text_color);
+}
+
+/* line 17, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_send_query.scss */
+.send_query .form-group input {
+padding: 24px 20px;
+border: 1px solid var(--border_color);
+border-radius: 0;
+font-size: 13px;
+color: #8f8f8f;
+text-transform: none;
+}
+
+/* line 26, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_send_query.scss */
+.send_query .form-group textarea {
+height: 160px;
+width: 100%;
+padding: 20px;
+font-size: 13px;
+border: 1px solid var(--border_color);
+}
+
+/* line 36, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_send_query.scss */
+.send_query .send_query_btn {
+margin: 0 auto;
+text-align: center;
+}
+
+/* line 39, /Applications/MAMP/htdocs/amazcart/amazcart/scss/_send_query.scss */
+.send_query .send_query_btn .btn_1 {
+margin-top: 0;
+}
+
+.section_padding {
+padding: 120px 0;
+}
+.section_tittle p {
+margin-bottom: 72px;
+}
+.mb_40{
+margin-bottom: 40px!important;
+}
+
+/*need to delete*/
+
+.switch-toggle div {
+box-shadow: 2.071px 7.727px 30px 0px rgba(211, 0, 98, 0.45);
+background-color: #ff1a1a;
+}
+.switch-toggle {
+background-color: #d4e1e1;
+border: blue;
+}
+/*need to delete*/
+
+@media (max-width: 767.98px) {
+.newsletter_form_wrapper .newsletter_form_inner {
+  grid-template-columns: auto;
+  height: 600px;
+  overflow: auto;
+}
+}
+.amaz_cta_box{
+background-image: none!important;
+padding: 0px!important;
+}
+.random_ads_div {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+button.amaz_primary_btn.style3.save_btn {
+padding: 5px 10px;
+margin-top: 10px;
+align-items: center;
+justify-content: center;
+text-align: center;
+width: 100%;
+}
+.slider-nav .item-slick{
+display: flex;
+width: 164px!important;
+height: 164px!important;
+align-items: center;
+justify-content: center;
+margin: 0 auto;
+}
+.slider-nav .item-slick img {
+max-width: 70%!important;
+max-height: 160px;
+width: auto;
+}
+.thumb.both_buy {
+width: 60px;
+height: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.thumb.both_buy img{
+max-width: 100%!important;
+max-height: 60px!important;
+}
+
+.House_Appliances_widget {
+max-height: 627px;
+min-height: 100%;
+}
+.House_Appliances_widget .House_Appliances_widget_right {
+  background-image: none;
+}
+.product_widget5 .thumb {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 340px;
+background: #f7f7f7;
+}
+
+.amazBrand_boxes .single_brand img {
+max-height: 70px;
+}
+.amazBrand_boxes .single_brand {
+min-height: 100px;
+}
+.gallery_large .slick-slide {
+min-height: 500px;
+align-items: center;
+justify-content: center;
+background: #f7f7f7;
+}
+
+.slider-nav .item-slick {
+background: #f7f7f7;
+}
+
+.slick_custom_container .slider-for img {
+  min-height: auto;
+  max-height: 495px;
+  max-width: 505px;
+  width: auto;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+.product_widget5.style3 {
+padding: 0px 0px 25px 0px;
+}
+.recomanded_discount .badge_1 {
+margin-top: -20px;
+}
+.return_part .exchange_part, .return_part .single_return_part {
+  background-color: var(--background_color);
+  padding: 50px;
+  margin-bottom: 20px;
+}
+.return_part .exchange_part ul, .return_part .single_return_part ul {
+padding: 0;
+list-style: none;
+margin: 7px 0 0;
+}
+.return_part .exchange_part ul li, .return_part .single_return_part ul li {
+  color: #8f8f8f;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 20px 0;
+  padding-left: 25px;
+  position: relative;
+  z-index: 1;
+}
+.return_part .exchange_part ul li:after, .return_part .single_return_part ul li:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 5px;
+  width: 5px;
+  height: 5px;
+  background-color: var(--text_color);
+}
+html[dir="rtl"] .return_part .exchange_part ul li, html[dir="rtl"] .return_part .single_return_part ul li{
+  padding-right: 25px;
+}
+html[dir="rtl"] .return_part .exchange_part ul li:after, html[dir="rtl"] .return_part .single_return_part ul li:after{
+  left: auto;
+  right: 0;
+}
+section.return_part.padding_top.bg-white {
+padding-top: 120px;
+}
+.home_banner.owl-carousel .owl-item img {
+max-width: 100%;
+max-height: 600px;
+width: auto;
+}
+.home_banner.owl-carousel .owl-item .banner_img {
+align-items: center;
+justify-content: center;
+display: flex;
+margin: 0 auto;
+}
+
+@media (max-width: 912px) {
+  .home_banner.owl-carousel.owl-item .banner_img {
+    height: 365px;
+  }
+  .home10_primary_btn2.small_btn {
+    padding: 2.5px 10px;
+  }
+  .checkout_summery_div{
+    justify-content: center!important;
+  }
+  .checkout_v3_area .checkout_v3_left {
+      padding: 30px 30px 60px;
+  }
+}
+@media (max-width: 812px) {
+.home_banner.owl-carousel .owl-item .banner_img {
+  height: auto;
+}
+}
+.payment_modal_wallet .wallet_payent_box .wallet_elemnt {
+width: 170px;
+height: 100px;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+}
+.payment_modal_wallet .wallet_payent_box .wallet_elemnt img{
+max-width: 100%;
+max-height: 75px;
+}
+.text_color{
+color: var(--text_color)!important;
+}
+.remove_sidebar_cart{
+background-color: var(--background_color);
+padding: 5px;
+border-radius: 50%;
+margin-top: -48px;
+margin-left: -15px;
+font-size: 10px;
+border: 1px solid var(--base_color);
+}
+
+.remove_sidebar_cart i {
+  color: var(--base_color);
+}
+
+.coupon_gift_box_text h3{
+font-size: 50px!important;
+font-weight: 600;
+margin-bottom: 15px!important;
+color: var(--base_color);
+text-align: center;
+}
+
+.coupon_gift_box_text .coupon_text {
+height: 100%;
+border-top-left-radius: 12px;
+border-bottom-left-radius: 12px;
+background-color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.coupon_gift_box_text .coupon_text h4 {
+font-size: 18px;
+font-weight: 400;
+color: var(--text_color);
+margin-bottom: 0;
+margin-right: 15px;
+white-space: nowrap;
+}
+.coupon_gift_box_text .coupon_text p {
+display: inline-block;
+font-size: 14px;
+color: var(--text_color);
+white-space: nowrap;
+}
+.list_style_product .product_thumb_upper .thumb {
+min-width: 300px!important;
+}
+footer.home_three_footer {
+background: var(--footer_color)!important;
+}
+.product_widget5.style4 .thumb img {
+max-width: 140px;
+/* min-width: 140px; */
+margin: auto;
+max-height: 140px;
+width: auto!important;
+}
+.singleVendor_product_list .thumb.single_thumb{
+display: flex;
+height: 100px;
+width: 100px;
+justify-content: center;
+align-items: center;
+}
+.singleVendor_product_list .thumb.single_thumb img{
+width: auto!important;
+max-width: 100px;
+max-height: 100px;
+}
+.nice-select.amaz_select6.wide.middle_menu_select ul li {
+display: flex;
+}
+
+
+.short_curt_icons .badge_count {
+  font-size: 14px;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* line 2437, G:/laragon/www/themeforest/AmazcartUi/HTML/scss/_reset.scss */
+.product_details_buttons {
+  position: fixed;
+  z-index: 1212;
+  bottom: 0;
+  left: 0;
+  background: var(--background_color);
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* line 2446, G:/laragon/www/themeforest/AmazcartUi/HTML/scss/_reset.scss */
+.product_details_buttons .product_details_icon {
+  width: 60px;
+  text-align: center;
+}
+
+/* line 2449, G:/laragon/www/themeforest/AmazcartUi/HTML/scss/_reset.scss */
+.product_details_buttons .product_details_icon i {
+  font-size: 18px;
+  color: var(--base_color);
+}
+
+/* line 2453, G:/laragon/www/themeforest/AmazcartUi/HTML/scss/_reset.scss */
+.product_details_buttons .product_details_icon span {
+  font-size: 14px;
+  color: var(--text_color);
+}
+
+/* line 2458, G:/laragon/www/themeforest/AmazcartUi/HTML/scss/_reset.scss */
+.product_details_buttons .product_details_button {
+  flex: 1 1 0;
+  white-space: nowrap;
+}
+
+/* line 2463, G:/laragon/www/themeforest/AmazcartUi/HTML/scss/_reset.scss */
+.product_details_button {
+  background: var(--base_color);
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  display: inline-block;
+  font-family: "Circular Std Book";
+  font-size: 14px;
+  color: var(--background_color);
+  font-weight: 700;
+  padding: 18.5px 24px;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: 0.3s;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* line 2481, G:/laragon/www/themeforest/AmazcartUi/HTML/scss/_reset.scss */
+.product_details_button.style1 {
+  background: #ffc107;
+  transform: skewX(-20deg);
+  position: relative;
+  left: 11px;
+  z-index: 1;
+}
+
+/* line 2487, G:/laragon/www/themeforest/AmazcartUi/HTML/scss/_reset.scss */
+.product_details_button.style1 span {
+  transform: skewX(20deg);
+}
+
+.amaz_recomanded_box .product_widget5 .thumb {
+  height: 280px!important;
+  width: 280px!important;
+  margin: 0 auto;
+}
+.amaz_recomanded_box .product_widget5 .thumb img{
+  max-width: 275px;
+  max-height: 275px;
+  width: auto!important;
+}
+
+.trending_product_active .product_widget5 .thumb {
+  height: 328px;
+  width: 328px;
+}
+.trending_product_active .product_widget5 .thumb img {
+  max-width: 325px;
+  max-height: 325px;
+  width: auto!important;
+}
+.House_Appliances_product .product_widget5.style4 .thumb{
+  width: 230px;
+  height: 230px;
+}
+.House_Appliances_product .product_widget5.style4 .thumb img {
+  max-height: 225px;
+  max-width: 225px;
+  width: auto!important;
+}
+.House_Appliances_product .product_widget5.style4 {
+  padding: 5px 0 5px!important;
+}
+.House_Appliances_product .product_widget5.style4 .product__meta {
+  padding: 0px 10px;
+}
+.amaz_fieature_active .product_widget5 .thumb {
+	height: 240px;
+}
+.amaz_fieature_active .product_widget5 .thumb img {
+	max-width: 95%;
+	max-height: 235px;
+}
+.dashboard_wishlist_grid .product_widget5.style3 .thumb {
+  height: 250px;
+}
+.dashboard_wishlist_grid .product_widget5.style3 .thumb img{
+  max-width: 245px;
+  max-height: 245px;
+}
+
+.amaz_home_cartBox {
+  padding: 20px 30px;
+  justify-content: start !important;
+  align-items: center;
+  grid-gap: 20px;
+}
+.amaz_home_cartBox .img_box {
+  display: flex;
+  flex: 110px 0 0;
+}
+.product_widget5 .product__meta h4,
+.product_widget5 .product__meta h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal !important;
+  min-height: 50px;
+}
+
+.min-height-250{
+  min-height: 250px;
+}
+.refund_product_list .theme_select::after {
+	right: 18px!important;
+}
+.nice-select.open .list {
+	max-width: 100%;
+}
+
+.fb_dialog_content iframe{
+  right: 55px!important;
+}
+
+.dynamic_svg svg path, .dynamic_svg svg rect, .dynamic_svg svg circle{
+  fill: var(--base_color)!important;
+  /* stroke: var(--base_color)!important; */
+}
+.remove_from_submenu_btn svg path{
+  fill: red!important;
+  stroke: transparent!important;
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+  .mobile_lang{
+      margin-left: 30px;
+  }
+  #back-top {
+    bottom: 65px;
+  }
+  
+}
+@media (max-width: 912px) {
+  .gallery_large:hover .slick_only_mobile{
+    opacity: 1;
+  }
+  .slick_custom_container .slider-nav{
+    display: none;
+  } 
+}
+@media (max-width: 805px){
+  .customer_review_wrapper .customer_review_wrapper_inner {
+    display: flex!important;
+    flex-wrap: wrap!important;
+    width: 100%;
+  } 
+}
+@media (max-width: 767.98px) {
+  .order_details_list_box .summery_lists .single_summery_list {
+   grid-gap: 10px;
+}
+.order_details_list_box .summery_lists .single_summery_list .order_text_head {
+  flex: 100px 0 0;
+}
+  .mobile_lang {
+      position: absolute;
+      top: 0;
+      left: 38px;
+      right: auto;
+      top: -45px;
+  }
+  html[dir="rtl"] .mobile_lang{
+    left: auto;
+  }
+  .mobile_lang .language_toggle_box {
+      right: auto;
+      left: 0;
+  }
+  html[dir="rtl"] .mobile_lang .language_toggle_box {
+    right: 0;
+    left: auto;
+  }
+  .home_banner .owlitem .banner_img {
+      height: auto!important;
+  }
+  .mobile_lang span {
+      font-size: 12px;
+  }
+  .home_banner .owl-item .banner_img {
+      height: auto;
+  }
+  #back-top {
+    bottom: 65px;
+  }
+  .amaz_fieature_active .product_widget5 .product__meta h4{
+    font-size: 14px;
+  }
+  .amaz_fieature_active .product_widget5 .thumb {
+    height: 150px;
+  }
+  .amaz_fieature_active .product_widget5 .thumb img {
+    max-height: 145px;
+    min-width: 140px;
+  }
+  .amzcart_tabs li button {
+    font-size: 14px;
+  }
+  .House_Appliances_widget .House_Appliances_widget_left h4 {
+      max-width: 100%;
+  }
+  .dashboard_account_wrapper {
+      display: flex;
+      grid-template-columns: auto 210px;
+      grid-gap: 90px;
+      padding-right: 60px;
+      flex-direction: column-reverse;
+  }
+  .shipingV3_info .single_shipingV3_info {
+      padding: 18px 0;
+      flex-wrap: wrap;
+      grid-gap: 5px;
+  }
+  .google_play_box {
+      padding: 5px 4px;
+      grid-gap: 5px;
+      flex: 50% 0 0;
+  }
+  .apps_boxs {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .google_play_box .google_play_text h4 {
+      font-size: 12px;
+  }
+  .google_play_box .google_play_text span {
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #fff;
+      line-height: 1;
+      display: block;
+      margin-bottom: 6px;
+  }
+  .google_play_box {
+      min-width: auto;
+      max-width: 215px;
+  }
+  .google_play_box {
+      padding: 10px 8px;
+      grid-gap: 5px;
+      min-height: 50px;
+      height: 50px;
+  }
+  .footer_links_50 {
+      width: 50%;
+  }
+  footer.home_three_footer .main_footer_wrap .footer_widget .social__Links {
+      text-align: center;
+  }
+  .footer_title {
+      text-align: center;
+  }
+  .shiping_address_box .shipingV3_info {
+    padding: 0 5px;
+  }   
+}
+
+@media (max-width: 430px) {
+  .gallery_large .slick-slide{
+    min-height: 390px;
+  }
+  .slick_custom_container .slider-for img {
+    max-height: 385px;
+    max-width: 348px;
+  }
+  .House_Appliances_product .product_widget5.style4 .thumb {
+    width: 150px;
+    height: 150px;
+  }
+  .House_Appliances_product .product_widget5.style4 .thumb img {
+    max-height: 145px;
+    max-width: 145px;
+    /* min-width: 140px; */
+  }
+  .amaz_recomanded_box .product_widget5 .thumb, .trending_product_active .product_widget5 .thumb {
+    margin: auto;
+  }
+  .product_page_list .product_widget5 .thumb {
+      height: 190px;
+      width: 190px;
+  }
+  .product_page_list .product_widget5 .thumb img {
+      max-width: 185px;
+      max-height: 185px;
+  }
+  .amaz_fieature_active .owl-nav {
+    top: -60px;
+  }
+  .shipping_delivery_div {
+    grid-gap: 10px!important;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .tab-content .product_widget5 .thumb {
+    height: 160px;
+    width: 160px;
+  }
+  .tab-content .product_widget5 .thumb img{
+    max-height: 155px;
+    max-width: 155px;
+  }
+  .product_details_dec_body {
+    overflow: hidden;
+  }
+  .white_box.style2 .amaz_primary_btn.min_200 {
+    min-width: 100px!important;
+  }
+  .white_box.style2 .amaz_primary_btn.style2 {
+    padding: 14.5px 15px 12.5px;
+  }
+  .single_shipingV3_info a{
+    width: 100%;
+  }
+  .dashboard_orderDetails_body .dashboard_orderDetails_head {
+    padding: 15px 10px;
+  }
+  .theme_select .current {
+    text-overflow: ellipsis;
+    max-width: 95%;
+    display: inline-block;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 390px) {
+  header.amazcartui_header .header_area .header__wrapper .header__left .logo_img img {
+      max-width: 110px;
+  }
+  .mobile_lang {
+      top: -41px;
+  }
+  .product_page_list .product_widget5 .thumb {
+    height: 160px;
+    width: 160px;
+  }
+  .product_page_list .product_widget5 .thumb img {
+      max-width: 155px;
+      max-height: 155px;
+  }
+  .white_box.style2 .dashboard_white_box_body {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .tab-content .product_widget5 .thumb {
+    height: 280px;
+    width: 280px;
+  }
+  .tab-content .product_widget5 .thumb img{
+    max-height: 275px;
+    max-width: 275px;
+  }
+}
+
+@media (max-width: 320px) {
+  .product_page_list .product_widget5 .thumb {
+    height: 140px;
+    width: 140px;
+  }
+  .product_page_list .product_widget5 .thumb img {
+      max-width: 135px;
+      max-height: 135px;
+  }
+}

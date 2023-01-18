@@ -1,0 +1,383 @@
+.keditor-btn.keditor-btn-default,
+.keditor-modal-close {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  background: #7c32ff;
+  border-radius: 50%;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.keditor-modal-close {
+  background: #7c32ff !important;
+}
+.keditor-btn.keditor-btn-default:hover,
+.keditor-modal-close:hover,
+.keditor-btn.keditor-btn-default:active,
+.keditor-btn.keditor-btn-default:focus {
+  box-shadow: 0px 10px 20px rgba(108, 39, 255, 0.3);
+  background: #7c32ff;
+}
+.keditor-modal {
+  width: 300px;
+  background-color: #34383c;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+.keditor-modal-header {
+  height: auto;
+  background-color: #34383c;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(130, 139, 178, 0.3) !important;
+}
+.keditor-snippets-filter-label {
+  color: #fff;
+}
+.keditor-ui.keditor-snippets-filter-wrapper {
+  flex-direction: column;
+  padding: 0px 0 0 10px;
+}
+.form-control {
+  border: 1px solid #eceef4;
+  font-size: 14px;
+  color: #415094;
+  padding-left: 20px;
+  height: 40px;
+  border-radius: 3px;
+  width: 100%;
+  padding-right: 15px;
+  box-shadow: none;
+}
+.form-control::placeholder,
+.keditor-snippets-filter-wrapper::placeholder {
+  color: #828bb2;
+}
+.form-control:focus,
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid #eceef4;
+}
+
+.keditor-modal-header .keditor-snippets-search {
+  width: 100%;
+  border-radius: 0;
+  height: 33px;
+  padding: 0 20px;
+  background-color: #4c4f56;
+  font-size: 11px;
+  padding: 10px 10px 10px 29px;
+  color: #fff;
+  border: none;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.keditor-modal-header .keditor-snippets-search::placeholder {
+  color: #e0e1e3;
+}
+.keditor-modal-header .keditor-snippets-filter,
+.keditor-modal-header .keditor-snippets-search {
+  background: #4c4f56;
+  padding: 0 15px;
+  height: 33px;
+  border-radius: 3px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+select.keditor-ui.keditor-snippets-filter {
+  color: #e0e1e3;
+}
+.keditor-snippet {
+  border: 0;
+  background: #404349;
+  width: 100%;
+  margin: 0;
+  border-radius: 3px;
+}
+span.keditor-ui.keditor-snippets-filter-label {
+  margin: 15px 0 10px 0;
+}
+.keditor-snippet .keditor-snippet-title {
+  height: 40px;
+  line-height: 40px;
+  color: #e0e1e3;
+  font-size: 11px;
+}
+.keditor-snippets-wrapper .keditor-snippets {
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-gap: 10px;
+  padding-bottom: 30px;
+  overflow-y: auto;
+}
+.keditor-modal-header .keditor-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.keditor-modal-body {
+  padding-bottom: 150px;
+}
+.keditor-snippet .keditor-snippet-inner {
+  padding: 32%;
+}
+.btn.btn-primary {
+  display: inline-block;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 40px;
+  padding: 0px 20px;
+  outline: none !important;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  background: #7c32ff;
+}
+.btn.btn-primary:hover {
+  box-shadow: 0px 10px 20px rgba(108, 39, 255, 0.3);
+  background: #7c32ff;
+}
+.btn.btn-default {
+  display: inline-block;
+  color: #7c32ff;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 40px;
+  padding: 0px 20px;
+  outline: none !important;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 1px solid #7c32ff;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  background: #fff;
+}
+.btn.btn-default:hover {
+  box-shadow: 0px 10px 20px rgba(108, 39, 255, 0.3);
+  background: #7c32ff !important;
+  color: #fff !important;
+}
+.keditor-container > .keditor-container-inner::before {
+  border: 2px dashed #d5dadf;
+  background-color: hsla(0, 0%, 100%, 0.5);
+}
+.keditor-container-content::before {
+  border: 1px dashed #d5dadf;
+}
+.keditor-container.showed-keditor-toolbar > .keditor-container-inner::before {
+  border-color: #d5dadf;
+}
+.keditor-snippet.selected {
+  border-color: #7c32ff;
+  box-shadow: 0 0 0 2px #7c32ff;
+}
+.keditor-ui.keditor-snippets-filter-wrapper {
+  padding: 0px 0 0 0px;
+}
+.keditor-wrapper {
+  width: calc(100% - 300px);
+  margin-left: 300px;
+  padding-top: 100px;
+  background: #fff;
+}
+.cke_browser_gecko {
+  display: flex !important;
+  align-items: center;
+  padding-top: 53px !important;
+  top: 100px !important;
+}
+.keditor-ui.keditor-topbar {
+  top: 0;
+  right: 0;
+  z-index: 111;
+  display: flex !important;
+  opacity: 1;
+  z-index: 10000;
+}
+.keditor-modal {
+  display: block !important;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+.toolbar {
+  left: 300px;
+}
+.keditor-ui.btn-add-content {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  background: #7c32ff !important;
+  border-radius: 50%;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  border-radius: 50% !important;
+  text-decoration: none !important;
+}
+.keditor-toolbar.keditor-toolbar-bottom {
+  border-radius: 50% 50% 0 0 !important;
+  background: #7c32ff !important;
+}
+.keditor-component:hover::before {
+  border-color: #7c32ff;
+}
+.keditor-component::before {
+  border: 1px dashed transparent;
+}
+.keditor-component:hover::before {
+  border-color: #7c32ff;
+}
+.keditor-component .keditor-toolbar {
+  background-color: #495157;
+  border-bottom-right-radius: 3px;
+}
+.keditor-ui.keditor-toolbar.keditor-toolbar-container {
+  display: flex;
+  flex-direction: column;
+}
+.keditor-toolbar > a {
+  font-size: 12px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: #495157;
+}
+.keditor-container > .keditor-toolbar {
+  top: -2px;
+  left: -25px;
+  border-radius: 3px 0 0 3px;
+}
+.keditor-container > .keditor-toolbar > a {
+  background: #495157;
+  color: #fff;
+}
+.keditor-container > .keditor-toolbar > a:hover {
+  background: #7c32ff;
+}
+.keditor-component .keditor-toolbar > a:hover {
+  background: #7c32ff;
+}
+.keditor-modal-header .keditor-modal-close {
+  display: none;
+}
+.keditor-topbar {
+  background: #34383c;
+}
+.keditor-modal-header {
+  background-color: #26292c;
+}
+/* cke_button  */
+.cke_toolbox a.cke_button {
+  display: inline-flex;
+  border: 1px solid #eceef4;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.cke_toolbox .cke_toolbar_separator {
+  background-color: #eceef4;
+  margin: 0 5px;
+  height: 30px;
+  transition: 0.3s;
+}
+.cke_toolbox a.cke_button_disabled:hover,
+.cke_toolbox a.cke_button_disabled:focus,
+.cke_toolbox a.cke_button_disabled:active,
+.cke_toolbox a.cke_button_off:hover,
+.cke_toolbox a.cke_button_off:focus,
+.cke_toolbox a.cke_button_off:active {
+  background-color: transparent;
+  padding: 0;
+  border: 1px solid #7c32ff;
+}
+.cke_toolbox .cke_toolgroup a.cke_button:last-child::after,
+.cke_toolbox
+  .cke_toolgroup
+  a.cke_button.cke_button_disabled:hover:last-child::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 0;
+  border-right: 1px solid #eceef4;
+  margin-top: 0;
+  top: 0;
+  right: -8px;
+}
+.cke_toolbar {
+  margin: 0 4px;
+}
+.cke_toolbar a.cke_combo_button {
+  cursor: default;
+  display: inline-block;
+  float: left;
+  margin: 0;
+  padding: 1px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid #eceef4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 30px;
+}
+.cke_toolbar .cke_combo_text {
+  line-height: 30px;
+}
+.cke_toolbar a.cke_button_expandable.cke_button_off:hover,
+.cke_toolbar a.cke_button_expandable.cke_button_off:focus,
+.cke_toolbar a.cke_button_expandable.cke_button_off:active {
+  padding: 0;
+}
+.cke_toolbar .cke_combo {
+  margin-right: 8px;
+}
+.cke_toolbar .cke_combo::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 0;
+  border-right: 1px solid #eceef4;
+  margin-top: 5px;
+  top: 0;
+  right: -4px;
+  top: -4px;
+}
+.cke_toolbar .cke_button.cke_button_on {
+  border-color: #7c32ff !important;
+}

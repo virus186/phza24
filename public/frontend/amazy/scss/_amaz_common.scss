@@ -1,0 +1,449 @@
+.amaz_cat_bg1 {
+  @include background("../img/amazCat/1.jpg", center center, no-repeat);
+}
+.amaz_cat_bg2 {
+  @include background("../img/amazCat/2.jpg", center center, no-repeat);
+}
+.amaz_cat_bg3 {
+  @include background("../img/amazCat/3.jpg", center center, no-repeat);
+}
+.amaz_cat_bg4 {
+  @include background("../img/amazCat/4.jpg", center center, no-repeat);
+}
+.amaz_cat_bg5 {
+  @include background("../img/amazCat/5.jpg", center center, no-repeat);
+}
+.amaz_cat_bg6 {
+  @include background("../img/amazCat/6.jpg", center center, no-repeat);
+}
+
+.amaz_home_cartBox {
+  padding: 38px 30px;
+  .amazcat_text_box {
+    h4 {
+      margin-bottom: 0;
+      a {
+        font-size: 20px;
+        font-weight: 700;
+        color: $home_primary;
+        display: block;
+        text-transform: capitalize;
+
+        &:hover {
+          color: $home_secondary;
+        }
+      }
+    }
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      color: $home_body;
+      margin: 4px 0 20px 0;
+    }
+    .shop_now_text {
+      font-size: 14px;
+      font-weight: 700;
+      color: $home_secondary;
+      text-transform: uppercase;
+      display: block;
+    }
+  }
+}
+
+.amaz_cta_box {
+  padding: 39px 37px;
+  @include background(
+    "../img/banner/amaz_cta_banner.jpg ",
+    center center,
+    no-repeat
+  );
+  @media #{$tab} {
+    padding: 30px;
+  }
+  .amaz_cta_text {
+    span {
+      font-size: 18px;
+      font-weight: 700;
+      color: $white;
+      text-transform: uppercase;
+      display: block;
+      @media #{$tab} {
+        font-size: 14px;
+      }
+    }
+    h4 {
+      font-size: 34px;
+      font-weight: 700;
+      color: $white;
+      text-transform: uppercase;
+      margin: 15px 0 16px 0;
+      @media #{$tab} {
+        font-size: 25px;
+      }
+    }
+    h5 {
+      font-size: 18px;
+      font-weight: 700;
+      color: $white;
+      text-transform: uppercase;
+      @media #{$tab} {
+        font-size: 14px;
+      }
+    }
+  }
+}
+.amaz_cta_box2 {
+  padding: 27px 30px 21px 30px;
+  border-radius: 5px;
+  @include background(
+    "../img/banner/amaz_cta_banner2.jpg ",
+    center center,
+    no-repeat
+  );
+  @media #{$tab} {
+    padding: 30px;
+  }
+  .amaz_cta_text {
+    span {
+      font-size: 18px;
+      font-weight: 700;
+      color: $white;
+      text-transform: uppercase;
+      display: block;
+      @media #{$tab} {
+        font-size: 14px;
+      }
+    }
+    h4 {
+      font-size: 34px;
+      font-weight: 700;
+      color: $white;
+      text-transform: uppercase;
+      margin: 15px 0 16px 0;
+      @media #{$tab} {
+        font-size: 25px;
+      }
+    }
+    h5 {
+      font-size: 18px;
+      font-weight: 700;
+      color: $white;
+      text-transform: uppercase;
+      @media #{$tab} {
+        font-size: 14px;
+      }
+    }
+  }
+}
+// weekly_bestDeal_area
+.deal_wizard_bg1 {
+  @include background("../img/home_1/deal/deal_1.jpg");
+}
+.deal_wizard_bg2 {
+  @include background("../img/home_1/deal/deal_2.jpg");
+}
+.deal_wizard_bg3 {
+  @include background("../img/home_1/deal/deal_3.jpg");
+}
+.amaz_deal_area {
+  .deal_wizard {
+    padding: 65px 50px 65px 50px;
+    @media #{$tab} {
+      padding: 30px 25px 30px 25px;
+    }
+    h3 {
+      font-size: 34px;
+      font-weight: 700;
+      color: $white;
+      line-height: 1.29;
+      max-width: 140px;
+      margin-bottom: 15px;
+      @media #{$tab} {
+        font-size: 25px;
+      }
+    }
+    a {
+      font-size: 14px;
+      font-weight: 700;
+      color: $white;
+      text-transform: uppercase;
+      &:hover {
+        color: $home_secondary;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.amazBrand_boxes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1px;
+  background: #f1ece8;
+  border: 1px solid #f1ece8;
+  @media #{$small_mobile } {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media #{$large_mobile } {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media #{$medium_device } {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .single_brand {
+    text-align: center;
+    background: $white;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.popular_search_lists {
+  display: flex;
+  flex-wrap: wrap;
+  grid-row-gap: 11px;
+  .popular_search_list {
+    font-size: 14px;
+    font-weight: 500;
+    color: $home_body;
+    position: relative;
+    display: inline-block;
+    &:not(:last-child) {
+      padding-right: 20px;
+      margin-right: 20px;
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 10px;
+        background: #f1ece8;
+        width: 1px;
+      }
+    }
+    &:hover {
+      color: $home_secondary;
+    }
+  }
+}
+
+.amaz_mazing_text {
+  p {
+    line-height: 1.71;
+    font-weight: 400;
+    color: $home_body;
+    margin: 0;
+  }
+  h4 {
+    margin: 17px 0 6px 0;
+  }
+}
+
+// recomanded
+.amaz_recomanded_box {
+  .owl-carousel .owl-stage-outer {
+    border-right: 1px solid #f1ece8;
+    border-left: 1px solid #f1ece8;
+  }
+  .amaz_recomanded_box_head {
+    padding: 22px 20px;
+    border: 1px solid #f1ece8;
+    border-bottom: 0;
+    h4 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+  .amaz_recomanded_box_body {
+    display: grid;
+    // grid-template-columns: repeat(5, 1fr);
+    margin-top: 1px;
+    grid-template-rows: repeat(2, 1fr);
+    // @media #{$tab} {
+    //   grid-template-columns: repeat(1, 1fr);
+    // }
+    // @media #{$medium_device} {
+    //   grid-template-columns: repeat(2, 1fr);
+    // }
+    // @media #{$lg_device} {
+    //   grid-template-columns: repeat(3, 1fr);
+    // }
+    // @media #{$large_xl} {
+    //   grid-template-columns: repeat(3, 1fr);
+    // }
+    .product_widget5 {
+      margin-left: -1px;
+      margin-top: -1px;
+      border: 1px solid #f1ece8;
+    }
+  }
+}
+// new updated
+.amaz_recomanded_box_body2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 1px;
+  margin-left: 1px;
+  @media #{$tab} {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media #{$medium_device} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media #{$lg_device} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media #{$large_xl} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .product_widget5 {
+    margin-left: -1px;
+    margin-top: -1px;
+    border: 1px solid #f1ece8;
+  }
+}
+.fieature_crousel_area {
+  .owl-stage {
+    padding-right: 0 !important;
+  }
+}
+
+.amzcart_tabs {
+  grid-gap: 30px;
+  li {
+    button {
+      font-size: 20px;
+      font-weight: 700;
+      color: $home_primary;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      position: relative;
+      padding: 0 0 7px 0;
+      z-index: 12;
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: $home_secondary;
+        opacity: 0;
+        transition: 0.3s;
+      }
+      &.active,
+      &:hover {
+        color: $home_secondary;
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+// House_Appliances_widget
+.House_Appliances_widget {
+  display: flex;
+  min-height: 627px;
+  @media #{$tab} {
+    flex-wrap: wrap;
+  }
+  .House_Appliances_widget_left {
+    border: 1px solid #f1ece8;
+    border-right: 0;
+    padding: 30px 0 30px 30px;
+    @media #{$tab} {
+      padding: 30px;
+      border: 1px solid #f1ece8 !important;
+    }
+    h4 {
+      font-size: 24px;
+      line-height: 1.42;
+      font-weight: 700;
+      max-width: 130px;
+    }
+    ul {
+      li {
+        &:not(:last-child) {
+          border-bottom: 1px solid #f1ece8;
+        }
+        a,
+        .nav-link {
+          font-size: 16px;
+          font-weight: 500;
+          color: $home_primary;
+          display: block;
+          padding: 13px 0;
+          border: 0;
+          width: 100%;
+          margin: 0;
+          text-align: left;
+          &:hover {
+            color: $home_secondary;
+          }
+        }
+      }
+    }
+  }
+  .House_Appliances_widget_right {
+    padding: 40px;
+    max-width: 330px;
+    flex: 330px 0 0;
+    @media #{$tab} {
+      max-width: 100%;
+      flex: 100% 0 0;
+      padding: 30px;
+    }
+    @include background(
+      "../img/amazPorduct/appliance_bg.jpg",
+      center center,
+      no-repeat
+    );
+    h4 {
+      font-size: 24px;
+      text-transform: uppercase;
+      line-height: 1.42;
+      color: $white;
+      font-weight: 700;
+
+      span {
+      }
+    }
+    h5 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fec221;
+      text-transform: uppercase;
+      margin: 8px 0 16px 0;
+    }
+  }
+}
+// House_Appliances_product
+.House_Appliances_product {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-left: 0;
+  margin-top: 1px;
+  margin-left: 1px;
+  @media #{$small_mobile} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media #{$large_mobile} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media #{$medium_device} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product_widget5 {
+    border: 1px solid #f1ece8;
+    margin-left: -1px;
+    margin-top: -1px;
+  }
+}
+
+.amaz_recomanded_area {
+  padding: 30px 0 55px 0;
+}

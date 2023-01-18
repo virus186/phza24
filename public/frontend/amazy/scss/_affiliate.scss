@@ -1,0 +1,346 @@
+.affiliate_bg {
+  background: #fafbfc;
+}
+.affiliate_faq_box {
+  border-bottom: 1px solid #e9eaf0;
+  padding-bottom: 26px;
+  padding-right: 30px;
+  @media #{$tab} {
+    padding-right: 0;
+  }
+  h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: $home_primary;
+    margin-bottom: 17px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.63;
+    color: $home_body;
+  }
+}
+
+.Affiliate_benefit_box {
+  padding: 40px;
+  border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.02);
+  border: 1px solid #eef0f4;
+  background-color: #fcfdfd;
+  img {
+    max-width: 50px;
+  }
+  h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: $home_primary;
+    margin: 30px 0 14px 0;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.63;
+    color: $home_body;
+    font-weight: 400;
+  }
+}
+
+.Requirements_boxs {
+  display: flex;
+  border: 1px solid #eef0f4;
+  @media #{$tab} {
+    flex-wrap: wrap;
+    grid-gap: 20px;
+  }
+}
+
+.single_Requirements_box {
+  flex: 50% 0 0;
+  background-color: #fff;
+  @media #{$tab} {
+    flex: 100% 0 0;
+  }
+  &:not(:last-child) {
+    border-right: 1px solid #f0f1f2;
+  }
+  .Requirements_box_head {
+    padding: 28px 40px 27px 40px;
+    border-bottom: 1px solid #f0f1f2;
+    @media #{$tab} {
+      padding: 30px;
+    }
+    &.style2 {
+      h3 {
+        color: $home_secondary;
+      }
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1ebf88;
+      margin-bottom: 0;
+    }
+  }
+  .Requirements_box_body {
+    padding: 35px 68px 40px 40px;
+    @media #{$tab} {
+      padding: 30px;
+    }
+    ul {
+      li {
+        display: flex;
+        grid-gap: 20px;
+        flex-wrap: wrap;
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+        .icon {
+          flex: 20px 0 0;
+          position: relative;
+          top: 3px;
+          img {
+            width: 100%;
+          }
+        }
+        p {
+          font-size: 16px;
+          font-weight: 500;
+          color: $home_primary;
+          line-height: 1.63;
+          font-family: $font1;
+          flex: 1 1 0;
+        }
+      }
+    }
+  }
+}
+
+.work_title_area {
+  display: flex;
+  grid-column-gap: 102px;
+  margin-bottom: 56px;
+  @media #{$tab} {
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  @media #{$medium_device} {
+    grid-column-gap: 30px;
+  }
+  .section__title4 {
+    max-width: 383px;
+  }
+  .work_title_desc {
+    margin-top: 43px;
+    @media #{$tab} {
+      margin-top: 20px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      color: $home_body;
+      line-height: 1.63;
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+.process_widget_box {
+  border-radius: 5px;
+  padding: 40px 60px 49px 60px;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.02);
+  border: 1px solid #eef0f4;
+  background-color: #fcfdfd;
+  @media #{$tab} {
+    padding: 30px;
+  }
+  .icon {
+    img {
+      max-width: 60px;
+    }
+  }
+  h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: $home_primary;
+    margin: 22px 0 13px 0;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.63;
+    color: $home_body;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+}
+
+// commision_box
+.commision_box {
+  border-radius: 5px;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.03);
+  background-color: #fff;
+  display: flex;
+  position: relative;
+  margin-top: -237px;
+  z-index: 10;
+  @media #{$tab} {
+    margin-top: 70px;
+    flex-wrap: wrap;
+  }
+
+  .theme_btn {
+    min-width: 280px;
+    text-align: center;
+    @media #{$tab} {
+      min-width: auto;
+    }
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-image: url(../img/affiliate/dots.svg);
+    background-repeat: repeat;
+    z-index: -1;
+  }
+  &::before {
+    left: -50px;
+    top: -47px;
+    @media #{$tab} {
+      left: 0;
+    }
+    @media #{$medium_device} {
+      left: 0;
+    }
+  }
+  &::after {
+    right: -50px;
+    bottom: -24px;
+    @media #{$tab} {
+      right: 0;
+    }
+    @media #{$medium_device} {
+      right: 0;
+    }
+  }
+  .circle_img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: -40px;
+    right: -40px;
+    z-index: -1;
+    @media #{$tab} {
+      right: 0;
+    }
+    @media #{$medium_device} {
+      right: 0;
+    }
+    img {
+      border-radius: 50%;
+      width: 100%;
+    }
+  }
+  @media #{$tab} {
+    margin-top: 60px;
+  }
+  .comissiion_left {
+    padding: 60px 75px 60px 100px;
+    max-width: 480px;
+    border-right: 1px solid #ebf1ff;
+    background: #fff;
+    @media #{$tab} {
+      padding: 30px;
+    }
+    @media #{$medium_device} {
+      padding: 30px;
+      max-width: 380px;
+    }
+    h4 {
+      font-size: 30px;
+      color: $home_primary;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+    h3 {
+      font-size: 50px;
+      font-weight: 700;
+      color: $home_primary;
+      line-height: 1;
+      margin: 0;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      color: $home_body;
+      line-height: 1.63;
+    }
+    .rate_text {
+      margin: 10px 0 35px 0;
+    }
+    .Sale_text {
+      margin-bottom: 37px;
+      margin-top: 5px;
+    }
+    .discription_text {
+      margin-top: 20px;
+    }
+  }
+  .comissiion_right {
+    padding: 80px 0 60px 100px;
+    background: #fff;
+    border-radius: 5px;
+    @media #{$tab} {
+      padding: 30px;
+    }
+    @media #{$tab} {
+      padding: 30px;
+    }
+    @media #{$medium_device} {
+      padding: 30px;
+    }
+    .commision_payment_lists {
+      max-width: 325px;
+      .commision_payment_list {
+        display: flex;
+        grid-gap: 20px;
+        &:not(:last-child) {
+          margin-bottom: 37px;
+        }
+        .thumb {
+          img {
+          }
+        }
+        .comission_payment_text {
+          h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: $home_primary;
+            margin-bottom: 3px;
+          }
+          p {
+            font-size: 15px;
+            line-height: 1.73;
+            color: $home_primary;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.affliate_faq-section {
+  padding-bottom: 94px;
+  @media #{$tab} {
+    padding-bottom: 70px;
+  }
+}

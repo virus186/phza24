@@ -1,0 +1,58 @@
+.bookbook_bg_1 {
+  @include background("../img/lookbook_img_1.png");
+}
+.bookbook_bg_2 {
+  @include background("../img/lookbook_img_2.png");
+}
+.bookbook_bg_3 {
+  @include background("../img/lookbook_img_3.png");
+}
+.bookbook_bg_4 {
+  @include background("../img/lookbook_img_4.png");
+}
+.lookbook_area {
+  padding-top: 50px;
+  @media #{$tab} {
+    padding-top: 30px;
+  }
+  @media #{$min_large} {
+    margin: 0 80px;
+  }
+  .single_lookbook {
+    padding: 212px 0;
+    @media #{$tab} {
+      padding: 70px 0;
+    }
+    &:not(:last-child) {
+      margin-bottom: 50px;
+      @media #{$tab} {
+        margin-bottom: 30px;
+      }
+    }
+    .lookbook_box {
+      max-width: 570px;
+      background: #fff;
+      padding: 75px 120px 80px 80px;
+      @media #{$tab} {
+        padding: 40px 30px;
+      }
+      span {
+        font-size: 14px;
+        color: #fd6700;
+        font-family: $font1;
+        font-weight: 700;
+      }
+      h4 {
+        font-size: 30px;
+        line-height: 1.5;
+        font-family: $font1;
+        font-weight: 700;
+        margin: 10px 0 27px 0;
+        @media #{$tab} {
+          font-size: 22px;
+          margin: 10px 0 20px 0;
+        }
+      }
+    }
+  }
+}

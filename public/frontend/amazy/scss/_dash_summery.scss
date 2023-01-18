@@ -1,0 +1,298 @@
+.summery_modal_body {
+  .close_modal_icon {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    border-radius: 50%;
+    transition: 0.3s;
+    display: inline-block;
+    background: #fff;
+    border: 0;
+    i {
+      line-height: 30px;
+      font-size: 14px;
+    }
+    &:hover {
+      background: $home_secondary;
+      color: #fff;
+      transform: rotate(90deg);
+    }
+  }
+  .summery_modal_body_inner {
+    padding: 50px 30px 60px 30px;
+    @media #{$tab} {
+      padding: 25px 20px;
+    }
+  }
+  .summery_modal_header {
+    background: #f9f9fd;
+    padding: 20.4px 30px;
+  }
+  .summery_modal_bodyHeader {
+    background: #f9f9fd;
+    padding: 15.4px 20px;
+  }
+  .summery_order_box {
+    .summery_order_body {
+      justify-content: space-between;
+      padding: 25px 20px 38px 20px;
+    }
+    .summery_lists {
+      .single_summery_list {
+        max-width: 360px;
+        @media #{$small_mobile} {
+          flex-wrap: wrap;
+        }
+        &:not(:last-child) {
+          margin-bottom: 7px;
+        }
+        .order_text_head {
+          flex: 136px 0 0;
+        }
+        p {
+          line-height: 1.86;
+          position: relative;
+          top: -3px;
+        }
+      }
+    }
+  }
+  .subtotal_and_payment_information {
+    .thumb {
+    }
+    .total_sumery_amount {
+      max-width: 330px;
+      border: 1px solid #e3e6ef;
+      background-color: #fafafa;
+      padding: 29px 30px 37px 30px;
+      border-radius: 5px;
+      flex: 330px 0 0;
+      @media #{$tab} {
+        flex: 270px 0 0;
+      }
+    }
+  }
+}
+
+.order_place_progress {
+  display: flex;
+  align-items: center;
+  @media #{$small_mobile} {
+    flex-wrap: wrap;
+  }
+  .single_order_progress {
+    flex: 1 0 0;
+    @media #{$small_mobile} {
+      flex: 50% 0 0;
+      margin-bottom: 20px;
+    }
+    &:not(:last-child) {
+      &::before {
+        content: "";
+        position: absolute;
+        left: calc(50% + 20px);
+        height: 1px;
+        background: #f1ece8;
+        top: 15px;
+        right: calc(-50% + 20px);
+        @media #{$small_mobile} {
+          display: none;
+        }
+      }
+    }
+    .icon {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.table_border_whiteBox {
+  padding: 10px 20px 0 20px;
+  border: 1px solid #e3e6ef;
+}
+
+.dashboard_wallet_boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  @media #{$tab} {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .singl_dashboard_wallet {
+    border-radius: 5px;
+    height: 150px;
+    h3 {
+      font-size: 40px;
+      @media #{$tab} {
+        font-size: 30px;
+      }
+    }
+    &.green_box {
+      background-color: #e7fff3;
+      h4 {
+        color: #50cd89;
+      }
+      h3 {
+        color: #50cd89;
+      }
+    }
+    &.pink_box {
+      background-color: #fff5f8;
+      h4 {
+        color: #f1416c;
+      }
+      h3 {
+        color: #f1416c;
+      }
+    }
+    &.bordered {
+      border: 1px dashed #e3e6ef;
+      background-color: #fcfdfd;
+    }
+  }
+}
+
+// payment_modal_wallet
+.payment_modal_wallet {
+  padding: 30px 30px 40px 30px;
+  &.style2 {
+    padding: 61px 60px 40px 60px;
+    @media #{$small_mobile} {
+      padding: 20px;
+    }
+  }
+  @media #{$small_mobile} {
+    padding: 20px;
+  }
+  .close_modal_icon {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    border-radius: 50%;
+    transition: 0.3s;
+    display: inline-block;
+    background: #fff;
+    border: 0;
+    i {
+      line-height: 30px;
+      font-size: 14px;
+    }
+    &:hover {
+      background: $home_secondary;
+      color: #fff;
+      transform: rotate(90deg);
+    }
+  }
+  .wallet_payent_box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(144px, 1fr));
+    grid-gap: 20px;
+    @media #{$small_mobile} {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      grid-gap: 10px;
+    }
+    .wallet_elemnt {
+      border-radius: 5px;
+      border: 1px solid #e3e6ef;
+      background-color: #fff;
+      padding: 12px;
+      &.active {
+        border-color: $home_secondary;
+      }
+    }
+  }
+}
+
+.dashboard_wishlist_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 1px;
+  margin-left: 1px;
+  @media #{$tab} {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media #{$medium_device} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media #{$lg_device} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media #{$large_xl} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .product_widget5 {
+    margin-left: -1px;
+    margin-top: -1px;
+    border: 1px solid #e3e6ef;
+  }
+}
+
+.add_cart_modalAdded {
+  padding: 40px;
+  .close_modal_icon {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    border-radius: 50%;
+    transition: 0.3s;
+    display: inline-block;
+    background: #fff;
+    border: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    i {
+      line-height: 30px;
+      font-size: 14px;
+    }
+    &:hover {
+      background: $home_secondary;
+      color: #fff;
+      transform: rotate(90deg);
+    }
+  }
+  @media #{$tab} {
+    padding: 20px;
+  }
+  .product_checked_box {
+    h4 {
+      font-size: 20px;
+      color: #4cb473;
+      font-weight: 500;
+      margin: 12px 0 0 0;
+    }
+  }
+  .cart_added_box {
+    margin: 23px 0 35px 0;
+    .cart_added_box_item {
+      .thumb {
+        flex: 120px 0 0;
+      }
+      .cart_added_content {
+        h4 {
+          font-size: 16px;
+          line-height: 26px;
+          color: #00124e;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+        h5 {
+          font-size: 16px;
+          line-height: 26px;
+          color: $home_secondary;
+          font-weight: 700;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

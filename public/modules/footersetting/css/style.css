@@ -1,0 +1,27 @@
+.dataTables_wrapper .dataTables_filter input {
+    margin-bottom: -8px!important;
+}
+.modal_cancel_btn{
+    padding: 4px 20px;
+}
+#about_description{
+    height: 200px;
+}
+.create_page_btn{
+    color: #ffffff!important;
+}
+
+#blogImgShow{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    max-height: 150px;
+}
+
+.img_div {
+    display: flex;
+    height: 153px;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+}
