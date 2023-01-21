@@ -6,13 +6,19 @@ use Razorpay\Api\Request;
 
 class TransferTest extends TestCase
 {
-    private $transferId = 'trf_IEn4KYFgfD7q3F';
+    /**
+     * Specify unique transfer id, account id & payment id
+     * for example trf_IEn4KYFgfD7q3F, acc_HjVXbtpSCIxENR &
+     * pay_I7watngocuEY4P
+     */
 
-    private $accountId = 'acc_HjVXbtpSCIxENR';
+    private $transferId = "trf_IEn4KYFgfD7q3F";
 
-    private $paymentId = 'pay_I7watngocuEY4P';
+    private $accountId = "acc_HjVXbtpSCIxENR";
 
-    public function setUp()
+    private $paymentId = "pay_I7watngocuEY4P";
+
+    public function setUp(): void
     {
         parent::setUp();
     }

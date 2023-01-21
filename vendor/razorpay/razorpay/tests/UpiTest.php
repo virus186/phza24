@@ -6,13 +6,19 @@ use Razorpay\Api\Request;
 
 class UpiTest extends TestCase
 {
-    private $customerId = 'cust_IEfAt3ruD4OEzo';
+     /**
+     * Specify unique customer id, invoice id & order id
+     * for example cust_IEfAt3ruD4OEzo, inv_IEfS5mBV49bIQY &
+     * order_IEgBdwYACpMLxd
+     */
 
-    private $invoiceId = 'inv_IEfS5mBV49bIQY';
+    private $customerId = "cust_IEfAt3ruD4OEzo";
 
-    private $orderId = 'order_IEgBdwYACpMLxd';
+    private $invoiceId = "inv_IEfS5mBV49bIQY";
 
-    public function setUp()
+    private $orderId = "order_IEgBdwYACpMLxd";
+
+    public function setUp(): void
     {
         parent::setUp();
     }
@@ -38,7 +44,7 @@ class UpiTest extends TestCase
 
         $this->assertTrue(is_array($data->toArray()));
 
-        $this->assertTrue(in_array('id',$data->toArray()));
+        $this->assertArrayHasKey('id',$data->toArray());
     }
     
     /**
@@ -114,7 +120,7 @@ class UpiTest extends TestCase
 
             $this->assertTrue(is_array($data->toArray()));
 
-            $this->assertTrue(in_array('id',$data->toArray()));
+            $this->assertArrayHasKey('id',$data->toArray());
         }
     }
 
@@ -128,6 +134,6 @@ class UpiTest extends TestCase
 
         $this->assertTrue(is_array($data->toArray()));
 
-        $this->assertTrue(in_array('id',$data->toArray()));
+        $this->assertArrayHasKey('id',$data->toArray());
     }
 }

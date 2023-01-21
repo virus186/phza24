@@ -12,7 +12,7 @@ $api->payment->fetch($paymentId)->capture(array('amount'=>$amount,'currency' => 
 |-----------|---------|--------------------------------------------------------------------------------|
 | paymentId* | string  | Id of the payment to capture                                                   |
 | amount*    | integer | The amount to be captured (should be equal to the authorized amount, in paise) |
-| currency   | string  | The currency of the payment (defaults to INR)                                  |
+| currency*   | string  | The currency of the payment (defaults to INR)                                  |
 
 **Response:**
 ```json
@@ -56,7 +56,7 @@ $api->payment->fetch($paymentId)->capture(array('amount'=>$amount,'currency' => 
 ### Fetch all payments
 
 ```php
-$api->payment->all($options)
+$api->payment->all($options);
 ```
 
 **Parameters:**
@@ -67,6 +67,7 @@ $api->payment->all($options)
 | to    | timestamp | timestamp before which the payments were created |
 | count | integer   | number of payments to fetch (default: 10)        |
 | skip  | integer   | number of payments to be skipped (default: 0)    |
+| expand[]   | string    |  Used to retrieve additional information about the payment. Possible value is `cards` or `emi`|
 
 **Response:**
 ```json
@@ -251,6 +252,7 @@ $api->payment->fetch($paymentId)->edit(array('notes'=> array('key_1'=> 'value1',
   "wallet": null,
   "vpa": null,
   "email": "testme@acme.com",
+  "customer_id": "cust_JR4BVKjKyJ7enk",
   "notes": {
     "key1": "value1",
     "key2": "value2"
@@ -275,13 +277,13 @@ $api->payment->fetch($paymentId)->edit(array('notes'=> array('key_1'=> 'value1',
 Request #1: Card
 
 ```php
-$api->payment->all(array('expand[]'=>'card')
+$api->payment->all(array('expand[]'=>'card'));
 ```
 
 Request #2: EMI
 
 ```php
-$api->payment->all(array('expand[]'=>'emi')
+$api->payment->all(array('expand[]'=>'emi'));
 ```
 
 **Response:**<br>
@@ -359,7 +361,7 @@ $api->order->create(array('amount' => 50000,'currency' => 'INR','receipt' => 'rc
 | amount*          | integer | Amount of the order to be paid                                               |
 | currency*        | string  | Currency of the order. Currently only `INR` is supported.       |
 | receipt         | string  | Your system order reference id.                                              |
-| payment         | array  | please refer this [doc](https://razorpay.com/docs/payments/payments/capture-settings/api/) for params                       |
+| payment         | array  | please refer this [doc](https://razorpay.com/docs/payments/payments/capture-settings/api/) for params  |
 
 **Response:** <br>
 ```json
@@ -386,6 +388,21 @@ $api->payment->createPaymentJson(array('amount' => 100,'currency' => 'INR','emai
 ```
 
 **Parameters:**
+| Name        | Type    | Description                          |
+|-------------|---------|--------------------------------------|
+| amount*          | integer | Amount of the order to be paid  |
+| currency*   | string  | The currency of the payment (defaults to INR)                                  |
+| order_id*        | string  | The unique identifier of the order created. |
+| email*        | string      | Email of the customer                       |
+| contact*      | string      | Contact number of the customer              |
+| method*      | string  | Possible value is `card`, `netbanking`, `wallet`,`emi`, `upi`, `cardless_emi`, `paylater`.  |
+| card      | array      | All keys listed [here](https://razorpay.com/docs/payments/payment-gateway/s2s-integration/payment-methods/#supported-payment-fields) are supported  |
+| bank      | string      | Bank code of the bank used for the payment. Required if the method is `netbanking`.|
+| bank_account | array      | All keys listed [here](https://razorpay.com/docs/payments/customers/customer-fund-account-api/#create-a-fund-account) are supported |
+| vpa      | string      | Virtual payment address of the customer. Required if the method is `upi`. |
+| wallet | string      | Wallet code for the wallet used for the payment. Required if the method is `wallet`. |
+| notes | array  | A key-value pair  |
+
  please refer this [doc](https://razorpay.com/docs/payment-gateway/s2s-integration/payment-methods/) for params
 
 **Response:** <br>
@@ -409,7 +426,9 @@ $api->payment->createPaymentJson(array('amount' => 100,'currency' => 'INR','emai
 ### OTP Generate
 
 ```php
-$api->payment->fetch($paymentId)->otpGenerate();
+$api = new Api("key","");  // Use Only razorpay key
+
+$api->payment->otpGenerate($paymentId);
 ```
 
 **Parameters:**
@@ -454,7 +473,8 @@ $api->payment->fetch($paymentId)->otpSubmit(array('otp'=> '12345'));
 
 | Name        | Type    | Description                          |
 |-------------|---------|--------------------------------------|
-| paymentId*    | integer | Unique identifier of the payment                                               |
+| paymentId*    | integer | Unique identifier of the payment  |
+| otp*    | string | The customer receives the OTP using their preferred notification medium - SMS or email |
 
 **Response:** <br>
 Success
@@ -477,6 +497,165 @@ Failure
 ```
 -------------------------------------------------------------------------------------------------------
 
+### Create Payment Json (Third party validation)
+
+```php
+$api->payment->createPaymentJson(array('amount' => 100,'currency' => 'INR','email' => 'gaurav.kumar@example.com','contact' => '9123456789','order_id' => 'order_I6LVPRQ6upW3uh','method' => 'netbanking', 'bank'=>'HDFC'));
+```
+
+**Parameters:**
+| Name        | Type    | Description                          |
+|-------------|---------|--------------------------------------|
+| amount*          | integer | Amount of the order to be paid  |
+| currency*   | string  | The currency of the payment (defaults to INR)                                  |
+| order_id*        | string  | The unique identifier of the order created. |
+| email*        | string      | Email of the customer                       |
+| contact*      | string      | Contact number of the customer              |
+| method*      | string  | Possible value is `netbanking` |
+| bank*      | string      | The customer's bank code.For example, `HDFC`.|
+
+ please refer this [doc](https://razorpay.com/docs/payments/third-party-validation/s2s-integration/netbanking#step-3-create-a-payment) for params
+
+**Response:** <br>
+```json
+{
+  "razorpay_payment_id": "pay_GAWOYqPlvrtPSi",
+  "next": [
+    {
+      "action": "redirect",
+      "url": "https://api.razorpay.com/v1/payments/pay_GAWOYqPlvrtPSi/authorize"
+    }
+  ]
+}
+```
+-------------------------------------------------------------------------------------------------------
+### Create Payment UPI s2s / VPA token (Third party validation)
+
+```php
+$api->payment->createUpi(array("amount" => 200,"currency" => "INR","order_id" => "order_Jhgp4wIVHQrg5H","email" => "gaurav.kumar@example.com","contact" => "9123456789","method" => "upi","customer_id" => "cust_EIW4T2etiweBmG","save" => 1,"ip" => "192.168.0.103","referer" => "http","user_agent" => "Mozilla/5.0","description" => "Test flow","notes" => array("note_key" => "value1"),"upi" => array("flow" => "collect","vpa" => "gauravkumar@exampleupi","expiry_time" => 5)));
+```
+
+**Parameters:**
+| Name        | Type    | Description                          |
+|-------------|---------|--------------------------------------|
+| amount*          | integer | Amount of the order to be paid  |
+| currency*   | string  | The currency of the payment (defaults to INR)                                  |
+| order_id*        | string  | The unique identifier of the order created. |
+| email*        | string      | Email of the customer                       |
+| customer_id*   | string      | The id of the customer to be fetched |
+| contact*      | string      | Contact number of the customer              |
+| notes | array  | A key-value pair  |
+| description | string  | Descriptive text of the payment. |
+| save | boolean  |  Specifies if the VPA should be stored as tokens.Possible value is `0`, `1`  |
+| callback_url   | string      | URL where Razorpay will submit the final payment status. |
+| ip*   | string      | The client's browser IP address. For example `117.217.74.98` |
+| referer*   | string      | Value of `referer` header passed by the client's browser. For example, `https://example.com/` |
+| user_agent*   | string      | Value of `user_agent` header passed by the client's browser. For example, `Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36` |
+| upi* (for Upi only)  | array      | All keys listed [here](https://razorpay.com/docs/payments/third-party-validation/s2s-integration/upi/collect#step-14-initiate-a-payment) are supported  |
+
+**Response:** <br>
+```json
+{
+  "razorpay_payment_id": "pay_EAm09NKReXi2e0"
+}
+```
+-------------------------------------------------------------------------------------------------------
+### Create Payment UPI s2s / VPA token (Third party validation)
+
+```php
+$api->payment->createUpi(array("amount" => 200,"currency" => "INR","order_id" => "order_Jhgp4wIVHQrg5H","email" => "gaurav.kumar@example.com","contact" => "9123456789","method" => "upi","customer_id" => "cust_EIW4T2etiweBmG","ip" => "192.168.0.103","referer" => "http","user_agent" => "Mozilla/5.0","description" => "Test flow","notes" => array("note_key" => "value1"),"upi" => array("flow" => "intent")));
+```
+
+**Parameters:**
+| Name        | Type    | Description                          |
+|-------------|---------|--------------------------------------|
+| amount*          | integer | Amount of the order to be paid  |
+| currency*   | string  | The currency of the payment (defaults to INR)                                  |
+| order_id*        | string  | The unique identifier of the order created. |
+| email*        | string      | Email of the customer                       |
+| customer_id*   | string      | The id of the customer to be fetched |
+| contact*      | string      | Contact number of the customer              |
+| notes | array  | A key-value pair  |
+| description | string  | Descriptive text of the payment. |
+| save | boolean  |  Specifies if the VPA should be stored as tokens.Possible value is `0`, `1`  |
+| callback_url   | string      | URL where Razorpay will submit the final payment status. |
+| ip*   | string      | The client's browser IP address. For example `117.217.74.98` |
+| referer*   | string      | Value of `referer` header passed by the client's browser. For example, `https://example.com/` |
+| user_agent*   | string      | Value of `user_agent` header passed by the client's browser. For example, `Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36` |
+| upi* (for Upi only)  | array      | All keys listed [here](https://razorpay.com/docs/payments/third-party-validation/s2s-integration/upi/intent/#step-2-initiate-a-payment) are supported  |
+
+**Response:** <br>
+```json
+{
+  "razorpay_payment_id": "pay_CMeM6XvOPGFiF",
+  "link": "upi://pay?pa=success@razorpay&pn=xyz&tr=xxxxxxxxxxx&tn=gourav&am=1&cu=INR&mc=xyzw"
+}
+```
+-------------------------------------------------------------------------------------------------------
+
+### Valid VPA (Third party validation)
+
+```php
+$api->payment->validateVpa(array('vpa'=>'gauravkumar@exampleupi'));
+```
+
+**Parameters:**
+| Name        | Type    | Description                          |
+|-------------|---------|--------------------------------------|
+| vpa*          | string | The virtual payment address (VPA) you want to validate. For example,   `gauravkumar@exampleupi`  |
+
+ please refer this [doc](https://razorpay.com/docs/payments/third-party-validation/s2s-integration/upi/collect#step-13-validate-the-vpa) for params
+
+**Response:** <br>
+```json
+{
+  "vpa": "gauravkumar@exampleupi",
+  "success": true,
+  "customer_name": "Gaurav Kumar"
+}
+```
+-------------------------------------------------------------------------------------------------------
+
+### Fetch payment methods (Third party validation)
+
+```php
+$api = new Api("key",""); // // Use Only razorpay key
+
+$api->payment->fetchPaymentMethods();
+```
+
+**Response:** <br>
+ please refer this [doc](https://razorpay.com/docs/payments/third-party-validation/s2s-integration/methods-api/#fetch-payment-methods) for response
+
+-------------------------------------------------------------------------------------------------------
+
+### OTP Resend
+
+```php
+$api->payment->fetch($paymentId)->otpResend();
+```
+
+**Parameters:**
+
+| Name        | Type    | Description                          |
+|-------------|---------|--------------------------------------|
+| paymentId*    | integer | Unique identifier of the payment                                               |
+
+Doc reference [doc](https://razorpay.com/docs/payments/payment-methods/cards/authentication/native-otp/#otp-resend)
+
+**Response:** <br>
+
+```json
+{
+  "next": [
+    "otp_submit",
+    "otp_resend"
+  ],
+  "razorpay_payment_id": "pay_JWaNvYmrx75sXo"
+}
+```
+
+-------------------------------------------------------------------------------------------------------
 **PN: * indicates mandatory fields**
 <br>
 <br>

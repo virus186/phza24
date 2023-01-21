@@ -3,12 +3,16 @@
 namespace PhpOffice\PhpSpreadsheet\Cell;
 
 use PhpOffice\PhpSpreadsheet\Calculation\Calculation;
+use PhpOffice\PhpSpreadsheet\Calculation\Information\ExcelError;
 use PhpOffice\PhpSpreadsheet\Collection\Cells;
 use PhpOffice\PhpSpreadsheet\Exception;
 use PhpOffice\PhpSpreadsheet\RichText\RichText;
+use PhpOffice\PhpSpreadsheet\Shared\Date as SharedDate;
+use PhpOffice\PhpSpreadsheet\Style\ConditionalFormatting\CellStyleAssessor;
 use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
 use PhpOffice\PhpSpreadsheet\Style\Style;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use Throwable;
 
 class Cell
 {
@@ -69,7 +73,7 @@ class Cell
      *
      * @return $this
      */
-    public function updateInCollection()
+    public function updateInCollection(): self
     {
         $this->parent->update($this);
 
@@ -139,7 +143,16 @@ class Cell
      */
     public function getCoordinate()
     {
-        return $this->parent->getCurrentCoordinate();
+        try {
+            $coordinate = $this->parent->getCurrentCoordinate();
+        } catch (Throwable $e) {
+            $coordinate = null;
+        }
+        if ($coordinate === null) {
+            throw new Exception('Coordinate no longer exists');
+        }
+
+        return $coordinate;
     }
 
     /**
@@ -189,6 +202,11 @@ class Cell
      *
      * @param mixed $value Value
      * @param string $dataType Explicit data type, see DataType::TYPE_*
+     *        Note that PhpSpreadsheet does not validate that the value and datatype are consistent, in using this
+     *             method, then it is your responsibility as an end-user developer to validate that the value and
+     *             the datatype match.
+     *       If you do mismatch value and datatpe, then the value you enter may be changed to match the datatype
+     *          that you specify.
      *
      * @return Cell
      */
@@ -197,7 +215,7 @@ class Cell
         // set the value according to data type
         switch ($dataType) {
             case DataType::TYPE_NULL:
-                $this->value = $value;
+                $this->value = null;
 
                 break;
             case DataType::TYPE_STRING2:
@@ -225,6 +243,11 @@ class Cell
                 $this->value = (bool) $value;
 
                 break;
+            case DataType::TYPE_ISO_DATE:
+                $this->value = SharedDate::convertIsoDate($value);
+                $dataType = DataType::TYPE_NUMERIC;
+
+                break;
             case DataType::TYPE_ERROR:
                 $this->value = DataType::checkErrorCode($value);
 
@@ -250,7 +273,7 @@ class Cell
      */
     public function getCalculatedValue($resetLog = true)
     {
-        if ($this->dataType == DataType::TYPE_FORMULA) {
+        if ($this->dataType === DataType::TYPE_FORMULA) {
             try {
                 $index = $this->getWorksheet()->getParent()->getActiveSheetIndex();
                 $selected = $this->getWorksheet()->getSelectedCells();
@@ -269,7 +292,7 @@ class Cell
                 if (($ex->getMessage() === 'Unable to access External Workbook') && ($this->calculatedValue !== null)) {
                     return $this->calculatedValue; // Fallback for calculations referencing external files.
                 } elseif (preg_match('/[Uu]ndefined (name|offset: 2|array key 2)/', $ex->getMessage()) === 1) {
-                    return \PhpOffice\PhpSpreadsheet\Calculation\Functions::NAME();
+                    return ExcelError::NAME();
                 }
 
                 throw new \PhpOffice\PhpSpreadsheet\Calculation\Exception(
@@ -349,20 +372,16 @@ class Cell
 
     /**
      * Identify if the cell contains a formula.
-     *
-     * @return bool
      */
-    public function isFormula()
+    public function isFormula(): bool
     {
-        return $this->dataType == DataType::TYPE_FORMULA;
+        return $this->dataType === DataType::TYPE_FORMULA && $this->getStyle()->getQuotePrefix() === false;
     }
 
     /**
      *    Does this cell contain Data validation rules?
-     *
-     * @return bool
      */
-    public function hasDataValidation()
+    public function hasDataValidation(): bool
     {
         if (!isset($this->parent)) {
             throw new Exception('Cannot check for data validation when cell is not bound to a worksheet');
@@ -387,12 +406,8 @@ class Cell
 
     /**
      * Set Data validation rules.
-     *
-     * @param DataValidation $dataValidation
-     *
-     * @return Cell
      */
-    public function setDataValidation(?DataValidation $dataValidation = null)
+    public function setDataValidation(?DataValidation $dataValidation = null): self
     {
         if (!isset($this->parent)) {
             throw new Exception('Cannot set data validation for cell that is not bound to a worksheet');
@@ -446,8 +461,6 @@ class Cell
     /**
      * Set Hyperlink.
      *
-     * @param Hyperlink $hyperlink
-     *
      * @return Cell
      */
     public function setHyperlink(?Hyperlink $hyperlink = null)
@@ -478,7 +491,17 @@ class Cell
      */
     public function getWorksheet()
     {
-        return $this->parent->getParent();
+        try {
+            $worksheet = $this->parent->getParent();
+        } catch (Throwable $e) {
+            $worksheet = null;
+        }
+
+        if ($worksheet === null) {
+            throw new Exception('Worksheet no longer exists');
+        }
+
+        return $worksheet;
     }
 
     /**
@@ -527,12 +550,28 @@ class Cell
 
     /**
      * Get cell style.
-     *
-     * @return Style
      */
-    public function getStyle()
+    public function getStyle(): Style
     {
         return $this->getWorksheet()->getStyle($this->getCoordinate());
+    }
+
+    /**
+     * Get cell style.
+     */
+    public function getAppliedStyle(): Style
+    {
+        if ($this->getWorksheet()->conditionalStylesExists($this->getCoordinate()) === false) {
+            return $this->getStyle();
+        }
+        $range = $this->getWorksheet()->getConditionalRange($this->getCoordinate());
+        if ($range === null) {
+            return $this->getStyle();
+        }
+
+        $matcher = new CellStyleAssessor($this, $range);
+
+        return $matcher->matchConditions($this->getWorksheet()->getConditionalStyles($this->getCoordinate()));
     }
 
     /**

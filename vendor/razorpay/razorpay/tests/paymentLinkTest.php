@@ -4,11 +4,15 @@ namespace Razorpay\Tests;
 
 use Razorpay\Api\Request;
 
-class paymentLinkTest extends TestCase
+class PaymentLinkTest extends TestCase
 {
-    private $paymentLinkId = 'plink_IEjOvfQs5AyjMN';
+    /**
+     * Specify unique paymentlink id
+     * for example plink_IEjOvfQs5AyjMN 
+     */
+    private $paymentLinkId = "plink_IEjOvfQs5AyjMN";
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
     }

@@ -4,11 +4,16 @@ namespace Razorpay\Tests;
 
 use Razorpay\Api\Request;
 
-class planTest extends TestCase
+class PlanTest extends TestCase
 {
-    private $planId = 'plan_IEeswu4zFBRGwi';
+    /**
+     * Specify unique plan id
+     * for example plan_IEeswu4zFBRGwi 
+     */
 
-    public function setUp()
+    private $planId = "plan_IEeswu4zFBRGwi";
+
+    public function setUp(): void
     {
         parent::setUp();
     }

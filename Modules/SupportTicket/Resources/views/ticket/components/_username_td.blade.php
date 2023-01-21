@@ -1,1 +1,0 @@
-{{ @$TicketList->user->getFullNameAttribute() }} <br> {{ @$TicketList->user->email }}

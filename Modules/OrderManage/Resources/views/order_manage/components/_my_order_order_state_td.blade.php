@@ -1,1 +1,0 @@
-<span class="@if($order_package->DeliveryStateName == 'Pending')badge_2 @else badge_1 @endif">{{ $order_package->DeliveryStateName }}</span>

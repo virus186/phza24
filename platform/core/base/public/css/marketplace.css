@@ -1,0 +1,9 @@
+@media (min-width: 768px) {
+  .modal-dialog-maketplace {
+    min-width: 600px !important;
+    margin: 80px auto 30px auto;
+  }
+  .modal-sm {
+    max-width: 300px;
+  }
+}

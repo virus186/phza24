@@ -1,8 +1,0 @@
-.list_div{
-    text-align: right;
-}
-@media (max-width: 767px){
-    .list_div{
-        text-align: left;
-    }
-}

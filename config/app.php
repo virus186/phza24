@@ -14,8 +14,6 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
-    'sync' => env('APP_SYNC', 'false'),
-    'force_https' => env('FORCE_HTTPS', 'false'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +54,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'asset_url' => env('ASSET_URL', null),
+    'asset_url' => env('ASSET_URL'),
 
     /*
     |--------------------------------------------------------------------------
@@ -69,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => env('TIME_ZONE', 'Asia/Dhaka'),
+    'timezone' => 'UTC',
 
     /*
     |--------------------------------------------------------------------------
@@ -95,18 +93,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'default',
-
-    /*
-        gmap api
-    */
-    'map_api_key' => env('GOOGLE_MAP_KEY', ''),
-    'map_api_status' => env('GOOGLE_MAPS_STATUS', 'false'),
-    'map_api_country_1' => env('GOOGLE_MAPS_COUNTRY_1', ''),
-    'map_api_country_2' => env('GOOGLE_MAPS_COUNTRY_2', ''),
-    'map_api_country_3' => env('GOOGLE_MAPS_COUNTRY_3', ''),
-    'map_api_country_4' => env('GOOGLE_MAPS_COUNTRY_4', ''),
-    'map_api_country_5' => env('GOOGLE_MAPS_COUNTRY_5', ''),
+    'fallback_locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -136,15 +123,23 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
-    'recaptcha_version' => env('NOCAPTCHA_VERSION'),
-    'recaptcha_invisible' => env('NOCAPTCHA_INVISIBLE'),
-    'recaptcha_site_key' => env('NOCAPTCHA_SITEKEY'),
-    'recaptcha_secret_key' => env('NOCAPTCHA_SECRET'),
-    'recaptcha_for_login' => env('NOCAPTCHA_FOR_LOGIN'),
-    'recaptcha_for_reg' => env('NOCAPTCHA_FOR_REG'),
-    'recaptcha_for_email' => env('NOCAPTCHA_FOR_EMAIL'),
-    'recaptcha_for_contact' => env('NOCAPTCHA_FOR_CONTACT'),
-    'recaptcha_for_checkout' => env('NOCAPTCHA_FOR_CHECKOUT'),
+    /*
+    |--------------------------------------------------------------------------
+    | Maintenance Mode Driver
+    |--------------------------------------------------------------------------
+    |
+    | These configuration options determine the driver used to determine and
+    | manage Laravel's "maintenance mode" status. The "cache" driver will
+    | allow maintenance mode to be controlled across multiple machines.
+    |
+    | Supported drivers: "file", "cache"
+    |
+    */
+
+    'maintenance' => [
+        'driver' => 'file',
+        // 'store'  => 'redis',
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -184,21 +179,10 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Unicodeveloper\Paystack\PaystackServiceProvider::class,
-        niklasravnsborg\LaravelPdf\PdfServiceProvider::class,
-        Anand\LaravelPaytmWallet\PaytmWalletServiceProvider::class,
-        KingFlamez\Rave\RaveServiceProvider::class,
-        Jorenvh\Share\Providers\ShareServiceProvider::class,
-        Yajra\DataTables\DataTablesServiceProvider::class,
-        Maatwebsite\Excel\ExcelServiceProvider::class,
 
         /*
          * Package Service Providers...
          */
-        Intervention\Image\ImageServiceProvider::class,
-        App\Providers\GeneralSettingsServiceProvider::class,
-        Laravel\Socialite\SocialiteServiceProvider::class,
-        Milon\Barcode\BarcodeServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -208,7 +192,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        App\Providers\BackendServiceProvider::class,
 
     ],
 
@@ -236,6 +219,7 @@ return [
         'Config' => Illuminate\Support\Facades\Config::class,
         'Cookie' => Illuminate\Support\Facades\Cookie::class,
         'Crypt' => Illuminate\Support\Facades\Crypt::class,
+        'Date' => Illuminate\Support\Facades\Date::class,
         'DB' => Illuminate\Support\Facades\DB::class,
         'Eloquent' => Illuminate\Database\Eloquent\Model::class,
         'Event' => Illuminate\Support\Facades\Event::class,
@@ -243,14 +227,16 @@ return [
         'Gate' => Illuminate\Support\Facades\Gate::class,
         'Hash' => Illuminate\Support\Facades\Hash::class,
         'Http' => Illuminate\Support\Facades\Http::class,
+        'Js' => Illuminate\Support\Js::class,
         'Lang' => Illuminate\Support\Facades\Lang::class,
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,
         'Notification' => Illuminate\Support\Facades\Notification::class,
         'Password' => Illuminate\Support\Facades\Password::class,
         'Queue' => Illuminate\Support\Facades\Queue::class,
+        'RateLimiter' => Illuminate\Support\Facades\RateLimiter::class,
         'Redirect' => Illuminate\Support\Facades\Redirect::class,
-        'Redis' => Illuminate\Support\Facades\Redis::class,
+        // 'Redis' => Illuminate\Support\Facades\Redis::class,
         'Request' => Illuminate\Support\Facades\Request::class,
         'Response' => Illuminate\Support\Facades\Response::class,
         'Route' => Illuminate\Support\Facades\Route::class,
@@ -261,17 +247,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Image' => Intervention\Image\Facades\Image::class,
-        'LogActivity' => Modules\UserActivityLog\Traits\LogActivity::class,
-        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
-        'Paystack' => Unicodeveloper\Paystack\Facades\Paystack::class,
-        'PDF' => niklasravnsborg\LaravelPdf\Facades\Pdf::class,
-        'PaytmWallet' => Anand\LaravelPaytmWallet\Facades\PaytmWallet::class,
-        'Rave' => KingFlamez\Rave\Facades\Rave::class,
-        'Share' => Jorenvh\Share\ShareFacade::class,
-        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
-        'DNS1D' => Milon\Barcode\Facades\DNS1DFacade::class,
-        'DNS2D' => Milon\Barcode\Facades\DNS2DFacade::class,
+
     ],
 
 ];

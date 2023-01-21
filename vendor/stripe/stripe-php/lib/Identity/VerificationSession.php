@@ -14,7 +14,7 @@ namespace Stripe\Identity;
  * A VerificationSession transitions through <a
  * href="/docs/identity/how-sessions-work">multiple statuses</a> throughout its
  * lifetime as it progresses through the verification flow. The VerificationSession
- * contains the user’s verified data after verification checks are complete.
+ * contains the user's verified data after verification checks are complete.
  *
  * Related guide: <a
  * href="https://stripe.com/docs/identity/verification-sessions">The Verification
@@ -58,7 +58,7 @@ class VerificationSession extends \Stripe\ApiResource
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
-     * @return \Stripe\VerificationSession the canceled verification session
+     * @return \Stripe\Identity\VerificationSession the canceled verification session
      */
     public function cancel($params = null, $opts = null)
     {
@@ -75,7 +75,7 @@ class VerificationSession extends \Stripe\ApiResource
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
-     * @return \Stripe\VerificationSession the redacted verification session
+     * @return \Stripe\Identity\VerificationSession the redacted verification session
      */
     public function redact($params = null, $opts = null)
     {

@@ -1,1 +1,0 @@
-{{ ($products->is_physical == 1) ? "Physical Product" : "Digital Product" }}

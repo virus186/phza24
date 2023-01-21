@@ -4,15 +4,21 @@ namespace Razorpay\Tests;
 
 use Razorpay\Api\Request;
 
-class virtualAccountTest extends TestCase
+class VirtualAccountTest extends TestCase
 {
-    private $customerId = 'cust_IEm1ERQLCdRGPV';
+    /**
+     * Specify unique customer id, payment id & virtual-account id
+     * for example cust_IEm1ERQLCdRGPV, pay_IEljgrElHGxXAC &
+     * va_IEmC8SOoyGxsNn
+     */
 
-    private $paymentId = 'pay_IEljgrElHGxXAC';
+    private $customerId = "cust_IEm1ERQLCdRGPV";
 
-    private $virtualAccountId = 'va_IEmC8SOoyGxsNn';
+    private $paymentId = "pay_IEljgrElHGxXAC";
 
-    public function setUp()
+    private $virtualAccountId = "va_IEmC8SOoyGxsNn";
+
+    public function setUp(): void
     {
         parent::setUp();
     }
@@ -26,7 +32,7 @@ class virtualAccountTest extends TestCase
 
         $this->assertTrue(is_array($data->toArray()));
 
-        $this->assertTrue(in_array('customer',$data->toArray()));
+        $this->assertArrayHasKey('customer_id',$data->toArray());
     }
 
     /**
@@ -38,7 +44,7 @@ class virtualAccountTest extends TestCase
 
         $this->assertTrue(is_array($data->toArray()));
 
-        $this->assertTrue(in_array('customer',$data->toArray()));
+        $this->assertArrayHasKey('customer_id',$data->toArray());
     }
 
     /**
@@ -62,7 +68,7 @@ class virtualAccountTest extends TestCase
 
         $this->assertTrue(is_array($data->toArray()));
 
-        $this->assertTrue(in_array('id',$data->toArray()));
+        $this->assertArrayHasKey('items',$data->toArray());
     }
 
     /**
@@ -75,8 +81,6 @@ class virtualAccountTest extends TestCase
         $data = $this->api->payment->fetch($this->paymentId)->refunds();
         
         $this->assertTrue(is_array($data->toArray()));
-
-        $this->assertTrue(in_array('id',$data->toArray()));
         
     }
 
@@ -93,7 +97,7 @@ class virtualAccountTest extends TestCase
             
             $this->assertTrue(is_array($data->toArray()));
     
-            $this->assertTrue(in_array('id',$data->toArray()));
+            $this->assertArrayHasKey('id',$data->toArray());
         }
     }
 }

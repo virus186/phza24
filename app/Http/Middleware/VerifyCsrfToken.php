@@ -9,17 +9,9 @@ class VerifyCsrfToken extends Middleware
     /**
      * The URIs that should be excluded from CSRF verification.
      *
-     * @var array
+     * @var array<int, string>
      */
     protected $except = [
-        '/paytm-payment/status',
-        '/jazzcash-payment-status',
-        '/payumoney-payment-success',
-        '/payumoney-payment-failed',
-        'install', 'install/*','search',
-
-//        Start SslComerze
-          '/ssl-commerz/success','/ssl-commerz/cancel','/ssl-commerz/fail','/ssl-commerz/ipn'
-//        End
+        //
     ];
 }

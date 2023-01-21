@@ -4,17 +4,23 @@ namespace Razorpay\Tests;
 
 use Razorpay\Api\Request;
 
-class paperNachTest extends TestCase
+class PaperNachTest extends TestCase
 {
-    private $customerId = 'cust_BMB3EwbqnqZ2EI';
+    /**
+     * Specify unique customer id, invoice id , order id & token id
+     * for example cust_IEfAt3ruD4OEzo, inv_IF37M4q6SdOpjT, 
+     * order_IF1TQZozl6Leaw & token_IF1ThOcFC9J7pU
+     */
 
-    private $invoiceId = 'inv_IF37M4q6SdOpjT';
+    private $customerId = "cust_IEfAt3ruD4OEzo";
 
-    private $orderId = 'order_IF1TQZozl6Leaw';
+    private $invoiceId = "inv_IF37M4q6SdOpjT";
 
-    private $tokenId = 'token_IF1ThOcFC9J7pU'; 
+    private $orderId = "order_IF1TQZozl6Leaw";
 
-    public function setUp()
+    private $tokenId = "token_IF1ThOcFC9J7pU"; 
+
+    public function setUp(): void
     {
         parent::setUp();
     }
@@ -40,7 +46,7 @@ class paperNachTest extends TestCase
 
         $this->assertTrue(is_array($data->toArray()));
 
-        $this->assertTrue(in_array('id',$data->toArray()));
+        $this->assertArrayHasKey('id',$data->toArray());
     }
     
     /**
@@ -91,7 +97,7 @@ class paperNachTest extends TestCase
 
             $this->assertTrue(is_array($data->toArray()));
 
-            $this->assertTrue(in_array('id',$data->toArray()));
+            $this->assertArrayHasKey('id',$data->toArray());
         }
     }
 
@@ -104,7 +110,7 @@ class paperNachTest extends TestCase
 
         $this->assertTrue(is_array($data->toArray()));
 
-        $this->assertTrue(in_array('id',$data->toArray()));
+        $this->assertArrayHasKey('id',$data->toArray());
     }
     
     /**

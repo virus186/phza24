@@ -6,11 +6,16 @@ use Razorpay\Api\Request;
 
 class SubscriptionTest extends TestCase
 {
-    private $subscriptionId = 'sub_IEKtBfPIqTHLWd';
+    /**
+     * Specify unique subscription id & plan id
+     * for example : sub_IEKtBfPIqTHLWd & plan_IEeswu4zFBRGwi
+     */  
 
-    private $plan = 'plan_IEeswu4zFBRGwi';
+    private $subscriptionId = "sub_IEllLOZcf0PODu";
 
-    public function setUp()
+    private $plan = "plan_IEeswu4zFBRGwi";
+
+    public function setUp(): void
     {
         parent::setUp();
     }
@@ -66,7 +71,6 @@ class SubscriptionTest extends TestCase
 
       $this->assertTrue(in_array('id',$data->toArray()));
 
-      $this->assertTrue($data['status'] == 'active');
     } 
     
     /**

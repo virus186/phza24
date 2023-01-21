@@ -4,13 +4,18 @@ namespace Razorpay\Tests;
 
 use Razorpay\Api\Request;
 
-class qrCodeTest extends TestCase
+class QrCodeTest extends TestCase
 {
-    private $qrCodeId = 'qr_IEjmDxjAY3iCnw';
+    /**
+     * Specify unique qrcode id & customer id
+     * for example qr_IEjmDxjAY3iCnw & cust_IEfAt3ruD4OEzo
+     */
 
-    private $customerId = 'cust_IEfAt3ruD4OEzo';
+    private $qrCodeId = "qr_IEjmDxjAY3iCnw";
 
-    public function setUp()
+    private $customerId = "cust_IEfAt3ruD4OEzo";
+
+    public function setUp(): void
     {
         parent::setUp();
     }
@@ -78,7 +83,7 @@ class qrCodeTest extends TestCase
      */
     public function testCloseQrCode()
     {
-        $qrCodeId = $this->api->qrCode->create(array("type" => "upi_qr","name" => "Store_1", "usage" => "single_use","fixed_amount" => 1,"payment_amount" => 300,"customer_id" => $customer['items'][0]['id'], "description" => "For Store 1","close_by" => 1681615838,"notes" => array("purpose" => "Test UPI QR code notes")));
+        $qrCodeId = $this->api->qrCode->create(array("type" => "upi_qr","name" => "Store_1", "usage" => "single_use","fixed_amount" => 1,"payment_amount" => 300,"customer_id" => $customerId, "description" => "For Store 1","close_by" => 1681615838,"notes" => array("purpose" => "Test UPI QR code notes")));
         
         $data = $this->api->qrCode->fetch($qrCodeId->id)->close();
 

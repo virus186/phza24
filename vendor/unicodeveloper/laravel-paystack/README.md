@@ -150,7 +150,7 @@ Route::post('/pay', [
 OR
 
 ```php
-// Laravel 8
+// Laravel 8 & 9
 Route::post('/pay', [App\Http\Controllers\PaymentController::class, 'redirectToGateway'])->name('pay');
 ```
 
@@ -171,7 +171,7 @@ Route::get('payment/callback', [
 OR
 
 ```php
-// Laravel 8
+// Laravel 8 & 9
 Route::get('/payment/callback', [App\Http\Controllers\PaymentController::class, 'handleGatewayCallback']);
 ```
 
@@ -217,6 +217,28 @@ class PaymentController extends Controller
         // you can then redirect or do whatever you want
     }
 }
+```
+
+```php
+/**
+ *  In the case where you need to pass the data from your 
+ *  controller instead of a form
+ *  Make sure to send:
+ *  required: email, amount, reference, orderID(probably)
+ *  optionally: currency, description, metadata
+ *  e.g:
+ *  
+ */
+$data = array(
+        "amount" => 700 * 100,
+        "reference" => '4g4g5485g8545jg8gj',
+        "email" => 'user@mail.com',
+        "currency" => "NGN",
+        "orderID" => 23456,
+    );
+
+return Paystack::getAuthorizationUrl($data)->redirectNow();
+
 ```
 
 Let me explain the fluent methods this package provides a bit here.

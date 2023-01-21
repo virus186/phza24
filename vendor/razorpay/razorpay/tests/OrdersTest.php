@@ -5,10 +5,15 @@ namespace Razorpay\Tests;
 use Razorpay\Api\Request;
 
 class OrdersTest extends TestCase
-{
-    private $orderId = 'order_IEfF1OrQbqxYJq';
+{   
+    /**
+     * Specify unique order id
+     * for example order_IEfF1OrQbqxYJq
+     */
 
-    public function setUp()
+    private $orderId = "order_IEfF1OrQbqxYJq";
+
+    public function setUp(): void
     {
         parent::setUp();
     }
@@ -22,7 +27,7 @@ class OrdersTest extends TestCase
 
         $this->assertTrue(is_array($data->toArray()));
 
-        $this->assertTrue(in_array('id',$data->toArray()));
+        $this->assertArrayHasKey('id',$data->toArray());
     }
 
     /**
@@ -69,7 +74,7 @@ class OrdersTest extends TestCase
 
         $this->assertTrue(is_array($data->toArray()));
 
-        $this->assertTrue(in_array('entitiy',$data->toArray()));
+        $this->assertArrayHasKey('id',$data->toArray());
 
     }
 }

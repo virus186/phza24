@@ -1,1 +1,0 @@
-<a><strong>{{ ($products->product_name) ? $products->product_name : $products->product->product_name}}</strong></a>
