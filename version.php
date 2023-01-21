@@ -1,5 +1,5 @@
 <?php
-    $project_name = 'AmazCart';
+    $project_name = 'WeeBuy';
     function getStorageFile($file_name){
         $file = 'storage/app/.'.$file_name;
         if(file_exists($file)){

@@ -8,5 +8,5 @@ return array(
 "password" => "Password",
 "password_confirmation" => "Confirm Password",
 'with_demo_data' => 'Install With Demo Data',
-"welcome_description" => "Thank you for choosing Amazcart . Please follow the steps to complete Amazcart installation!",
+"welcome_description" => "Thank you for choosing weeBuy. Please follow the steps to complete weeBuyinstallation!",
 );
